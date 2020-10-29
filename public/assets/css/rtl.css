@@ -1,0 +1,30 @@
+.sidebar,
+.off-canvas-sidebar {
+    left: auto !important;
+    right: 0 !important;
+}
+
+.main-panel {
+    float: left !important;
+}
+.form-group.label-static label.control-label, .form-group.label-floating.is-focused label.control-label, .form-group.label-floating:not(.is-empty) label.control-label {
+    left: auto !important;
+    right: 0 !important;
+}
+.navbar-header,.navbar-nav,.navbar-right {
+    float: left !important;
+}
+.sidebar .nav i,
+.off-canvas-sidebar .nav i {
+    float: left !important;
+}
+.search{
+    float: left !important;
+}
+.pagination-div{
+    float: left !important;
+}
+
+.submit-btn .btn{
+    float: left !important;
+}
