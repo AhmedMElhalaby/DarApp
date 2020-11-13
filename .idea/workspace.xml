@@ -2,48 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f6c06b2-2883-4aa3-bed7-dac8c325c520" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppData/AreaController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppData/CityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppData/CurrencyController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/EstateController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/DeleteMediaRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/DestroySavedSearchRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/FavouriteRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/FavouriteToggleRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/IndexRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/SavedSearchRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/ShowRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/StoreRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/UpdateRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Estate/EstateResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Estate/SavedSearchResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Home/AreaResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Home/CityResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Home/CurrencyResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Home/MediaResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Area.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/City.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Currency.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Estate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/EstateArea.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Favourite.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/SavedSearch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_10_180631_create_cities_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_10_182429_create_areas_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_10_185117_create_currencies_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_10_195321_create_estates_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_12_183049_create_saved_searches_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_075534_create_favourites_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helpers/Constant.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/Constant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Api/Home/InstallRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Home/InstallRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/crud.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/crud.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/crud.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/crud.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/AhmedPanel/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/layouts/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,8 +215,16 @@
       <workItem from="1605164283896" duration="236000" />
       <workItem from="1605196646423" duration="4823000" />
       <workItem from="1605236634739" duration="13607000" />
-      <workItem from="1605262340969" duration="2628000" />
+      <workItem from="1605262340969" duration="3317000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1605265283537</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605265283537</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +232,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="457" y="170" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605254597085">
@@ -280,10 +250,11 @@
     </state>
     <state x="-990" y="74" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738/-1440.-130.1440.900@-1440.-130.1440.900" timestamp="1603693517118" />
     <state x="427" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1605253708737" />
-    <state x="1703" y="-113" key="CommitChangelistDialog2" timestamp="1603951860270">
-      <screen x="1366" y="-130" width="1440" height="900" />
+    <state x="320" y="0" key="CommitChangelistDialog2" timestamp="1605265279484">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="1703" y="-113" key="CommitChangelistDialog2/0.0.1366.738/1366.-130.1440.900@1366.-130.1440.900" timestamp="1603951860270" />
+    <state x="320" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1605265279484" />
     <state x="1937" y="215" key="Create Json Resource Collection" timestamp="1603769365443">
       <screen x="1366" y="-130" width="1440" height="900" />
     </state>
@@ -299,6 +270,10 @@
     <state x="-1219" y="-36" key="SettingsEditor/0.0.1366.738/-1440.-130.1440.900@-1440.-130.1440.900" timestamp="1603636507500" />
     <state x="1587" y="-36" key="SettingsEditor/0.0.1366.738/1366.-130.1440.900@1366.-130.1440.900" timestamp="1603769067436" />
     <state x="210" y="27" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1605205419061" />
+    <state x="0" y="0" key="Vcs.Push.Dialog.v2" timestamp="1605265285034">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="0" y="0" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1605265285034" />
     <state x="1903" y="233" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603951583527">
       <screen x="1366" y="-130" width="1440" height="900" />
     </state>
