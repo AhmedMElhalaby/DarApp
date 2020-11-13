@@ -139,6 +139,54 @@ Route::group([
             Route::delete('/{bank_account}','BankAccountController@destroy');
             Route::get('/option/export','BankAccountController@export');
         });
+        Route::group([
+            'prefix'=>'cities'
+        ],function () {
+            Route::get('/','CityController@index');
+            Route::get('/create','CityController@create');
+            Route::post('/','CityController@store');
+            Route::get('/{city}','CityController@show');
+            Route::get('/{city}/edit','CityController@edit');
+            Route::put('/{city}','CityController@update');
+            Route::delete('/{city}','CityController@destroy');
+            Route::get('/option/export','CityController@export');
+        });
+        Route::group([
+            'prefix'=>'currencies'
+        ],function () {
+            Route::get('/','CurrencyController@index');
+            Route::get('/create','CurrencyController@create');
+            Route::post('/','CurrencyController@store');
+            Route::get('/{currency}','CurrencyController@show');
+            Route::get('/{currency}/edit','CurrencyController@edit');
+            Route::put('/{currency}','CurrencyController@update');
+            Route::delete('/{currency}','CurrencyController@destroy');
+            Route::get('/option/export','CurrencyController@export');
+        });
+        Route::group([
+            'prefix'=>'areas'
+        ],function () {
+            Route::get('/','AreaController@index');
+            Route::get('/create','AreaController@create');
+            Route::post('/','AreaController@store');
+            Route::get('/{area}','AreaController@show');
+            Route::get('/{area}/edit','AreaController@edit');
+            Route::put('/{area}','AreaController@update');
+            Route::delete('/{area}','AreaController@destroy');
+            Route::get('/option/export','AreaController@export');
+        });
+        Route::group([
+            'prefix'=>'estate_areas'
+        ],function () {
+            Route::get('/','EstateAreaController@index');
+            Route::get('/create','EstateAreaController@create');
+            Route::post('/','EstateAreaController@store');
+            Route::get('/{estate_area}','EstateAreaController@show');
+            Route::get('/{estate_area}/edit','EstateAreaController@edit');
+            Route::put('/{estate_area}','EstateAreaController@update');
+            Route::delete('/{estate_area}','EstateAreaController@destroy');
+            Route::get('/option/export','EstateAreaController@export');
+        });
     });
     /*
     |--------------------------------------------------------------------------

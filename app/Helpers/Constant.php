@@ -45,4 +45,29 @@ class Constant
     ];
     const SOCIAL_PROVIDER_RULES = '1,2';
 
+    const ESTATE_TYPE = [
+        'House'=>1,
+        'Apartment'=>2,
+        'Land'=>3,
+        'Shop'=>4,
+    ];
+    const ESTATE_TYPE_RULES = '1,2,3,4';
+
+    const ESTATE_OFFER_TYPE = [
+        'Selling'=>1,
+        'Renting'=>2,
+        'Switching'=>3,
+    ];
+    const ESTATE_OFFER_TYPE_RULES = '1,2,3';
+
+    const FINISHING_TYPE = [
+        'No Finishing'=>1,
+        'Full Finishing'=>2,
+        'Super Finishing'=>3,
+    ];
+    const FINISHING_TYPE_RULES = '1,2,3';
+    const MEDIA_TYPES = [
+        'Estate Media'=>1,
+        'Estate Neighborhood Media'=>2,
+    ];
 }

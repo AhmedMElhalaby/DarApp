@@ -2,240 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f6c06b2-2883-4aa3-bed7-dac8c325c520" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Export/AhmedPanel/EntityExport.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Helpers/AttributeName.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Helpers/Constant.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Helpers/Functions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppData/BankAccountController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppData/FaqController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppData/SettingController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppManagement/AdminController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppManagement/PermissionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppManagement/RoleController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Auth/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserManagement/TicketController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserManagement/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/NotificationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TicketController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticatedAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/localization.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/AppData/Setting/UpdateFieldsRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/UserManagement/Ticket/CloseRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/UserManagement/Ticket/ResponseRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AhmedPanel/ActivationRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AhmedPanel/DestroyRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AhmedPanel/ExportRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AhmedPanel/SearchRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AhmedPanel/StoreRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AhmedPanel/UpdatePasswordRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AhmedPanel/UpdateRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/ApiRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Auth/ForgetPasswordRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Auth/LoginRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Auth/PasswordRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Auth/RefreshRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Auth/RegistrationRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Auth/ResendVerifyRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Auth/ResetPasswordRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Auth/SendForgetPasswordRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Auth/SocialLoginRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Auth/UserRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Auth/VerifyRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Home/FaqRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Home/InstallRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Notification/ReadAllRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Notification/ReadRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Notification/SearchRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Notification/SendRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Ticket/IndexRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Ticket/ResponseRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Ticket/ShowRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Ticket/StoreRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/AhmedPanel/ExportResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/General/NotificationResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Home/BankAccountResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Home/FaqResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Home/UserResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Ticket/TicketResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Ticket/TicketResponseResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/User/UserResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/BankAccount.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Faq.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Media.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/ModelPermission.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/ModelRole.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Notification.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/PasswordReset.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Permission.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Role.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/RolePermission.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Setting.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/SocialLogin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Ticket.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/TicketResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/VerifyAccounts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Notifications/PasswordReset.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Notifications/PasswordResetSuccess.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Notifications/VerifyAccount.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Traits/AhmedPanelTrait.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Traits/ResponseTrait.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_09_18_063746_create_social_login_tabel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_10_26_094614_create_admins_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_10_26_095424_create_verify_accounts_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_021941_create_notifications_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_21_050142_create_roles_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_21_050211_create_permissions_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_21_050321_create_role_permissions_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_21_051526_create_model_roles_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_21_051756_create_model_permissions_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_04_26_215943_create_settings_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_06_03_084521_create_bank_accounts_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_07_08_055015_create_tickets_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_07_18_082436_create_faqs_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_14_143722_create_ticket_responses_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_03_171141_create_media_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/InstallSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/bootstrap-rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/colors/blue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/colors/brown.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/colors/dark-blue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/colors/dark-green.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/colors/dark-yellow.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/colors/green-blue.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/colors/green.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/colors/lightdbrown.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/colors/manshour.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/colors/orange.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/colors/purple.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/colors/red.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/material-dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/owl.theme.default.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/css/rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/apple-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/cover.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/faces/marc.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/hafalat.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/mask.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/new_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/sidebar-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/sidebar-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/sidebar-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/sidebar-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/tim_80x80.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/upload.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/upload.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/upload_identity.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/upload_insurance.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/upload_user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/user.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/img/user.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/bootstrap-notify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/chartist.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/jquery-3.1.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/material-dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/material.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/js/owl.carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/slider/uikit-icons.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/slider/uikit-rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/slider/uikit.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/slider/uikit.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/notifications.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/pagination.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/passwords.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/validation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/crud.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/notifications.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Admin/AppData/Setting/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Admin/UserManagement/Ticket/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Admin/UserManagement/User/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/auth/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/columns/active.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/columns/custom_relation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/columns/datetime.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/columns/default.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/columns/email.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/columns/file.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/columns/image.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/columns/relation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/columns/select.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/columns/status.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/columns/text-custom.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/fields/active.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/fields/added_by.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/fields/custom_relation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/fields/datetime.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/fields/email.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/fields/image.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/fields/images.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/fields/multi_checkbox.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/fields/number.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/fields/password.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/fields/relation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/fields/select.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/fields/text.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/fields/textarea.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/fields/time.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/links/active.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/links/change_password.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/links/custom.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/links/delete.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/links/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/links/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/search/active.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/search/custom_relation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/search/datetime.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/search/default.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/search/relation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/search/select.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/crud/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/crud/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/crud/export.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/crud/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/crud/main.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/layouts/app.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/layouts/sidebar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/privacy.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/verification.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/pagination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppData/AreaController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppData/CityController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppData/CurrencyController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/EstateController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/DeleteMediaRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/DestroySavedSearchRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/FavouriteRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/FavouriteToggleRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/IndexRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/SavedSearchRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/ShowRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/StoreRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/UpdateRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Estate/EstateResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Estate/SavedSearchResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Home/AreaResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Home/CityResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Home/CurrencyResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Home/MediaResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Area.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/City.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Currency.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Estate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/EstateArea.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Favourite.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/SavedSearch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_10_180631_create_cities_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_10_182429_create_areas_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_10_185117_create_currencies_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_10_195321_create_estates_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_12_183049_create_saved_searches_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_13_075534_create_favourites_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/Constant.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/Constant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Api/Home/InstallRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Home/InstallRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/crud.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/crud.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/crud.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/crud.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AhmedPanel/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/layouts/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -378,14 +186,18 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1jNF8s3oTI0GdR0YDQVMUNQ6HP4" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests/Admin/AppData/Setting" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Resources/Api/Home" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -393,16 +205,16 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\localhost\DarApp\app\Http\Requests\Admin\AppData\Setting" />
-      <recent name="D:\localhost\DarApp\resources\views\Admin\AppData\Setting" />
-      <recent name="D:\localhost\DarApp\app\Http\Requests\Api\Auth" />
-      <recent name="D:\localhost\DarApp\public\assets\css\colors" />
-      <recent name="D:\localhost\DarApp\database\migrations" />
+      <recent name="D:\localhost\DarApp\app\Http\Resources\Api\Home" />
+      <recent name="D:\localhost\DarApp\app\Http\Requests\Api\Estate" />
+      <recent name="D:\localhost\DarApp\app\Models" />
+      <recent name="D:\localhost\DarApp\app\Http\Resources\Api\Estate" />
+      <recent name="D:\localhost\DarApp\app\Http\Resources\Api" />
     </key>
   </component>
   <component name="RunManager">
@@ -432,42 +244,84 @@
       <workItem from="1603860010859" duration="4599000" />
       <workItem from="1603894283347" duration="4000" />
       <workItem from="1603895694633" duration="5818000" />
-      <workItem from="1603941263235" duration="9510000" />
+      <workItem from="1603941263235" duration="11477000" />
+      <workItem from="1604565102217" duration="5000" />
+      <workItem from="1604574401855" duration="603000" />
+      <workItem from="1604578766772" duration="54000" />
+      <workItem from="1605031291350" duration="8567000" />
+      <workItem from="1605075875496" duration="593000" />
+      <workItem from="1605109825354" duration="9882000" />
+      <workItem from="1605162711220" duration="305000" />
+      <workItem from="1605164283896" duration="236000" />
+      <workItem from="1605196646423" duration="4823000" />
+      <workItem from="1605236634739" duration="13607000" />
+      <workItem from="1605262340969" duration="2628000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="1891" y="35" key="#com.intellij.ide.util.MemberChooser" timestamp="1603863032881">
-      <screen x="1366" y="-130" width="1440" height="900" />
+    <state x="457" y="170" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605254597085">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="457" y="170" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1605254597085" />
+    <state x="498" y="135" key="#com.intellij.ide.util.MemberChooser" timestamp="1605254262356">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="1891" y="35" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738/1366.-130.1440.900@1366.-130.1440.900" timestamp="1603863032881" />
-    <state x="-990" y="74" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603693517118">
-      <screen x="-1440" y="-130" width="1440" height="900" />
+    <state x="498" y="135" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1605254262356" />
+    <state x="427" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605253708737">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="-990" y="74" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738/-1440.-130.1440.900@-1440.-130.1440.900" timestamp="1603693517118" />
+    <state x="427" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1605253708737" />
+    <state x="1703" y="-113" key="CommitChangelistDialog2" timestamp="1603951860270">
+      <screen x="1366" y="-130" width="1440" height="900" />
+    </state>
+    <state x="1703" y="-113" key="CommitChangelistDialog2/0.0.1366.738/1366.-130.1440.900@1366.-130.1440.900" timestamp="1603951860270" />
     <state x="1937" y="215" key="Create Json Resource Collection" timestamp="1603769365443">
       <screen x="1366" y="-130" width="1440" height="900" />
     </state>
     <state x="1937" y="215" key="Create Json Resource Collection/0.0.1366.738/1366.-130.1440.900@1366.-130.1440.900" timestamp="1603769365443" />
-    <state x="1866" y="74" key="FileChooserDialogImpl" timestamp="1603768343246">
-      <screen x="1366" y="-130" width="1440" height="900" />
+    <state x="474" y="167" key="FileChooserDialogImpl" timestamp="1605245560618">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="1866" y="74" key="FileChooserDialogImpl/0.0.1366.738/1366.-130.1440.900@1366.-130.1440.900" timestamp="1603768343246" />
-    <state x="1587" y="-36" key="SettingsEditor" timestamp="1603769067436">
-      <screen x="1366" y="-130" width="1440" height="900" />
+    <state x="474" y="167" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1605245560618" />
+    <state x="210" y="27" key="SettingsEditor" timestamp="1605205419061">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="-1219" y="-36" key="SettingsEditor/0.0.1366.738/-1440.-130.1440.900@-1440.-130.1440.900" timestamp="1603636507500" />
     <state x="1587" y="-36" key="SettingsEditor/0.0.1366.738/1366.-130.1440.900@1366.-130.1440.900" timestamp="1603769067436" />
+    <state x="210" y="27" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1605205419061" />
     <state x="1903" y="233" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603951583527">
       <screen x="1366" y="-130" width="1440" height="900" />
     </state>
     <state x="1903" y="233" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738/1366.-130.1440.900@1366.-130.1440.900" timestamp="1603951583527" />
-    <state x="1749" y="60" width="672" height="678" key="search.everywhere.popup" timestamp="1603951612921">
-      <screen x="1366" y="-130" width="1440" height="900" />
+    <state x="339" y="165" key="run.anything.popup" timestamp="1605205100622">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1605205100622" />
+    <state x="363" y="156" width="672" height="556" key="search.everywhere.popup" timestamp="1605264905340">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="1749" y="60" width="672" height="678" key="search.everywhere.popup/0.0.1366.738/1366.-130.1440.900@1366.-130.1440.900" timestamp="1603951612921" />
+    <state x="363" y="156" width="672" height="556" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1605264905340" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Models/Estate.php</url>
+          <line>65</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

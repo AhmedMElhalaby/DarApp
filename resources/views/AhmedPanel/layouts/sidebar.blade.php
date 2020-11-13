@@ -64,6 +64,30 @@
                     </a>
                 </li>
             @endif
+            @if (auth('admin')->user()->can('Cities'))
+                <li class="nav-item @if(strpos(url()->current() , url('admin/app_data/cities'))===0) active @endif">
+                    <a href="{{url('admin/app_data/cities')}}" class="nav-link">
+                        <i class="material-icons">location_city</i>
+                        <p>{{__('admin.sidebar.cities')}}</p>
+                    </a>
+                </li>
+            @endif
+            @if (auth('admin')->user()->can('Areas'))
+                <li class="nav-item @if(strpos(url()->current() , url('admin/app_data/areas'))===0) active @endif">
+                    <a href="{{url('admin/app_data/areas')}}" class="nav-link">
+                        <i class="material-icons">streetview</i>
+                        <p>{{__('admin.sidebar.areas')}}</p>
+                    </a>
+                </li>
+            @endif
+            @if (auth('admin')->user()->can('Currencies'))
+                <li class="nav-item @if(strpos(url()->current() , url('admin/app_data/currencies'))===0) active @endif">
+                    <a href="{{url('admin/app_data/currencies')}}" class="nav-link">
+                        <i class="material-icons">local_atm</i>
+                        <p>{{__('admin.sidebar.currencies')}}</p>
+                    </a>
+                </li>
+            @endif
 {{--            @if (auth('admin')->user()->can('BankAccounts'))--}}
 {{--                <li class="nav-item @if(strpos(url()->current() , url('admin/app_data/bank_accounts'))===0) active @endif">--}}
 {{--                    <a href="{{url('admin/app_data/bank_accounts')}}" class="nav-link">--}}

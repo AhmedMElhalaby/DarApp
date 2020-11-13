@@ -56,10 +56,28 @@ Route::group([
         Route::post('response','TicketController@response');
     });
 
+
 });
 Route::group([
     'prefix' => 'home',
 ], function() {
     Route::get('faqs','HomeController@faqs');
     Route::get('install','HomeController@install');
+});
+Route::group([
+    'prefix' => 'estates',
+], function() {
+    Route::get('/','EstateController@index');
+    Route::get('show','EstateController@show');
+    Route::group([
+        'middleware' => 'auth:api'
+    ], function() {
+        Route::post('store','EstateController@store');
+        Route::post('update','EstateController@update');
+        Route::get('saved_searches','EstateController@saved_searches');
+        Route::post('saved_searches/delete','EstateController@destroy_saved_searches');
+        Route::get('favourites','EstateController@favourites');
+        Route::post('favourites/toggle','EstateController@favourite_toggle');
+        Route::post('media/delete','EstateController@delete_media');
+    });
 });
