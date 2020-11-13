@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Favourite extends Model
 {
-    protected $table = 'areas';
+    protected $table = 'favourites';
     protected $fillable = ['user_id','estate_id'];
 
     public function user(){
