@@ -2,7 +2,11 @@
 
 namespace App\Http\Resources\Api\Estate;
 
+use App\Http\Resources\Api\Home\AreaResource;
+use App\Http\Resources\Api\Home\CityResource;
+use App\Http\Resources\Api\Home\CurrencyResource;
 use App\Http\Resources\Api\Home\MediaResource;
+use App\Http\Resources\Api\Home\UserResource;
 use App\Models\Favourite;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -20,11 +24,15 @@ class EstateResource extends JsonResource
         $Objects = array();
         $Objects['id'] = $this->id;
         $Objects['user_id'] = $this->getUserId();
+        $Objects['User'] = ($this->user)?new UserResource($this->user):null;
         $Objects['estate_type'] = $this->getEstateType();
         $Objects['estate_offer_type'] = $this->getEstateOfferType();
         $Objects['city_id'] = $this->getCityId();
+        $Objects['City'] = ($this->city)?new CityResource($this->city):null;
         $Objects['area_id'] = $this->getAreaId();
+        $Objects['Area'] = ($this->area)?new AreaResource($this->area):null;
         $Objects['currency_id'] = $this->getCurrencyId();
+        $Objects['Currency'] = ($this->currency)?new CurrencyResource($this->currency):null;
         $Objects['street'] = $this->getStreet();
         $Objects['price'] = $this->getPrice();
         $Objects['estate_area'] = $this->getEstateArea();

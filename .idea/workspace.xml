@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7f6c06b2-2883-4aa3-bed7-dac8c325c520" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +214,9 @@
       <workItem from="1605164283896" duration="236000" />
       <workItem from="1605196646423" duration="4823000" />
       <workItem from="1605236634739" duration="13607000" />
-      <workItem from="1605262340969" duration="3317000" />
+      <workItem from="1605262340969" duration="3720000" />
+      <workItem from="1605284645841" duration="163000" />
+      <workItem from="1607860337049" duration="256000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1605265283537</created>
@@ -245,11 +246,11 @@
     </state>
     <state x="1891" y="35" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738/1366.-130.1440.900@1366.-130.1440.900" timestamp="1603863032881" />
     <state x="498" y="135" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1605254262356" />
-    <state x="427" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605253708737">
+    <state x="427" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605265636773">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="-990" y="74" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738/-1440.-130.1440.900@-1440.-130.1440.900" timestamp="1603693517118" />
-    <state x="427" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1605253708737" />
+    <state x="427" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1605265636773" />
     <state x="320" y="0" key="CommitChangelistDialog2" timestamp="1605265279484">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
