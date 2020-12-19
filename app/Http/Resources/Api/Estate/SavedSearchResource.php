@@ -2,6 +2,9 @@
 
 namespace App\Http\Resources\Api\Estate;
 
+use App\Http\Resources\Api\Home\AreaResource;
+use App\Http\Resources\Api\Home\CityResource;
+use App\Http\Resources\Api\Home\UserResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -18,8 +21,11 @@ class SavedSearchResource extends JsonResource
         $Objects = array();
         $Objects['id'] = $this->getId();
         $Objects['user_id'] = $this->getUserId();
+        $Objects['User'] = ($this->user)?new UserResource($this->user):null;
         $Objects['city_id'] = $this->getCityId();
+        $Objects['City'] = ($this->city)?new CityResource($this->city):null;
         $Objects['area_id'] = $this->getAreaId();
+        $Objects['Area'] = ($this->area)?new AreaResource($this->area):null;
         $Objects['estate_type'] = $this->getEstateType();
         $Objects['estate_offer_type'] = $this->getEstateOfferType();
         $Objects['room_no'] = $this->getRoomNo();

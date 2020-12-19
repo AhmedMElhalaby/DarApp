@@ -35,6 +35,15 @@ class SavedSearch extends Model
 {
     protected $table = 'saved_searches';
     protected $fillable = ['user_id','city_id','area_id','estate_type','estate_offer_type','room_no','bathroom_no','halls_no','estate_area','building_age','finishing_type','elementary_schools_no','preparatory_schools_no','secondary_schools_no','kindergarten_no','has_sea_view','has_well','has_public_street_view','has_garage','is_payment_type_installment','price_from','price_to',];
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+    public function city(){
+        return $this->belongsTo(City::class);
+    }
+    public function area(){
+        return $this->belongsTo(Area::class);
+    }
 
     /**
      * @return int
