@@ -9,7 +9,7 @@ use App\Models\SavedSearch;
 use App\Models\View;
 use App\Traits\ResponseTrait;
 
-class ShowRequest extends ApiRequest
+class RecentViewRequest extends ApiRequest
 {
     use ResponseTrait;
 
@@ -31,18 +31,13 @@ class ShowRequest extends ApiRequest
     public function rules()
     {
         return [
-            'estate_id'=>'required|exists:estates,id',
         ];
     }
 
     public function persist()
     {
-        if(auth()->check()){
-            $View = new View();
-            $View->setEstateId($this->estate_id);
-            $View->setUserId(auth()->user()->getId());
-            $View->save();
-        }
-        return $this->successJsonResponse([],new EstateResource((new Estate())->find($this->estate_id)),'Estate');
+        $Views = (new View())->where('user_id',auth()->user()->getId())->orderBy('created_at','desc')->pluck('estate_id');
+        $Objects = EstateResource::collection((new Estate())->whereIn('id', $Views)->paginate(10));
+        return $this->successJsonResponse([],$Objects->items(),'Estates',$Objects);
     }
 }

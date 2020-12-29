@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f6c06b2-2883-4aa3-bed7-dac8c325c520" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/GetOfferRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/MyOfferRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/SetOfferRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Estate/OfferResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Offer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_29_041356_create_offers_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/RecentViewRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/View.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_29_071958_create_views_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/EstateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/EstateController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/ShowRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/ShowRequest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,8 +178,8 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\localhost\DarApp\app\Http\Requests\Api\Estate" />
-      <recent name="D:\localhost\DarApp\app\Http\Resources\Api\Estate" />
       <recent name="D:\localhost\DarApp\app\Models" />
+      <recent name="D:\localhost\DarApp\app\Http\Resources\Api\Estate" />
       <recent name="D:\localhost\DarApp\app\Http\Resources\Api\Home" />
       <recent name="D:\localhost\DarApp\app\Http\Resources\Api" />
     </key>
@@ -231,6 +228,7 @@
       <workItem from="1608390917672" duration="983000" />
       <workItem from="1608446631463" duration="254000" />
       <workItem from="1609213890624" duration="4177000" />
+      <workItem from="1609224305722" duration="2892000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1605265283537</created>

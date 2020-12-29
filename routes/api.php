@@ -69,6 +69,7 @@ Route::group([
 ], function() {
     Route::get('/','EstateController@index');
     Route::get('show','EstateController@show');
+    Route::get('get_offers','EstateController@get_offers');
     Route::group([
         'middleware' => 'auth:api'
     ], function() {
@@ -76,8 +77,8 @@ Route::group([
         Route::post('update','EstateController@update');
         Route::get('saved_searches','EstateController@saved_searches');
         Route::post('set_offer','EstateController@set_offer');
-        Route::get('get_offers','EstateController@get_offers');
         Route::get('my_offers','EstateController@my_offers');
+        Route::get('recent_views','EstateController@recent_views');
         Route::post('saved_searches/delete','EstateController@destroy_saved_searches');
         Route::get('favourites','EstateController@favourites');
         Route::post('favourites/toggle','EstateController@favourite_toggle');

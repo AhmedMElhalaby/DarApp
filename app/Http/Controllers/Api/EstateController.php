@@ -15,6 +15,7 @@ use App\Http\Requests\Api\Estate\DeleteMediaRequest;
 use App\Http\Requests\Api\Estate\SetOfferRequest;
 use App\Http\Requests\Api\Estate\GetOfferRequest;
 use App\Http\Requests\Api\Estate\MyOfferRequest;
+use App\Http\Requests\Api\Estate\RecentViewRequest;
 use App\Traits\ResponseTrait;
 use Illuminate\Http\JsonResponse;
 
@@ -104,6 +105,13 @@ class EstateController extends Controller
      * @return JsonResponse
      */
     public function my_offers(MyOfferRequest $request){
+        return $request->persist();
+    }
+    /**
+     * @param RecentViewRequest $request
+     * @return JsonResponse
+     */
+    public function recent_views(RecentViewRequest $request){
         return $request->persist();
     }
 
