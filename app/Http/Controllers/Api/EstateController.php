@@ -12,6 +12,9 @@ use App\Http\Requests\Api\Estate\StoreRequest;
 use App\Http\Requests\Api\Estate\UpdateRequest;
 use App\Http\Requests\Api\Estate\ShowRequest;
 use App\Http\Requests\Api\Estate\DeleteMediaRequest;
+use App\Http\Requests\Api\Estate\SetOfferRequest;
+use App\Http\Requests\Api\Estate\GetOfferRequest;
+use App\Http\Requests\Api\Estate\MyOfferRequest;
 use App\Traits\ResponseTrait;
 use Illuminate\Http\JsonResponse;
 
@@ -82,7 +85,26 @@ class EstateController extends Controller
     public function delete_media(DeleteMediaRequest $request){
         return $request->persist();
     }
-
-
+    /**
+     * @param SetOfferRequest $request
+     * @return JsonResponse
+     */
+    public function set_offer(SetOfferRequest $request){
+        return $request->persist();
+    }
+    /**
+     * @param GetOfferRequest $request
+     * @return JsonResponse
+     */
+    public function get_offers(GetOfferRequest $request){
+        return $request->persist();
+    }
+    /**
+     * @param MyOfferRequest $request
+     * @return JsonResponse
+     */
+    public function my_offers(MyOfferRequest $request){
+        return $request->persist();
+    }
 
 }
