@@ -48,7 +48,7 @@ class StoreRequest extends ApiRequest
             'land_interface'=>'required_if:estate_type,'.Constant::ESTATE_TYPE['Land'].'|numeric',
             'shop_length_area'=>'required_if:estate_type,'.Constant::ESTATE_TYPE['Shop'].'|numeric',
             'shop_width_area'=>'required_if:estate_type,'.Constant::ESTATE_TYPE['Shop'].'|numeric',
-            'room_no'=>'sometimes|numeric',
+            'room_no'=>'sometimes',
             'bathroom_no'=>'sometimes|numeric',
             'halls_no'=>'sometimes|numeric',
             'floors_no'=>'sometimes|numeric',
