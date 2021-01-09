@@ -30,8 +30,8 @@ class IndexRequest extends ApiRequest
     public function rules()
     {
         return [
-            'mine'=>'sometimes|boolean',
-            'save'=>'sometimes|boolean',
+            'mine'=>'sometimes',
+            'save'=>'sometimes',
             'room_no'=>'sometimes|integer',
             'city_id'=>'sometimes|exists:cities,id',
             'area_id'=>'sometimes|exists:areas,id',
