@@ -32,9 +32,9 @@ class IndexRequest extends ApiRequest
         return [
             'mine'=>'sometimes',
             'save'=>'sometimes',
-            'room_no'=>'sometimes|integer',
-            'city_id'=>'sometimes|exists:cities,id',
-            'area_id'=>'sometimes|exists:areas,id',
+            'room_no'=>'sometimes',
+            'city_id'=>'sometimes',
+            'area_id'=>'sometimes',
         ];
     }
 
