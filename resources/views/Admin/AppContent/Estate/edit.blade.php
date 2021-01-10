@@ -1,0 +1,770 @@
+@extends('AhmedPanel.crud.main')
+@section('content')
+    <div class="row">
+        <div class="col-md-12">
+            <form action="{{url($redirect.'/'.$Object->id)}}" method="post" enctype="multipart/form-data" class="card">
+                <input name="_method" type="hidden" value="PUT">
+                @csrf
+                <div class="card-header card-header-tabs card-header-primary" data-background-color="{{ config('app.color') }}">
+                    <div class="nav-tabs-navigation">
+                        <div class="nav-tabs-wrapper">
+{{--                            <span class="nav-tabs-title">{{__('admin.add')}} {{__('crud.'.$lang.'.crud_name')}} </span>--}}
+                            <ul class="nav nav-tabs" data-tabs="tabs">
+                                <li class="nav-item active">
+                                    <a class="nav-link active show" id="basic_info_tab" href="#basic_info" data-toggle="tab">
+                                        <i class="material-icons">bug_report</i> {{__('crud.'.$lang.'.Tabs.basic_info')}}
+                                        <div class="ripple-container"></div>
+                                        <div class="ripple-container"></div>
+                                     </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="estate_details_tab" href="#estate_details" data-toggle="tab">
+                                        <i class="material-icons">code</i> {{__('crud.'.$lang.'.Tabs.estate_details')}}
+                                        <div class="ripple-container"></div>
+                                        <div class="ripple-container"></div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="estate_media_tab" href="#estate_media" data-toggle="tab">
+                                        <i class="material-icons">cloud</i> {{__('crud.'.$lang.'.Tabs.estate_media')}}
+                                        <div class="ripple-container"></div>
+                                        <div class="ripple-container"></div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="payment_and_contact_tab" href="#payment_and_contact" data-toggle="tab">
+                                        <i class="material-icons">cloud</i> {{__('crud.'.$lang.'.Tabs.payment_and_contact')}}
+                                        <div class="ripple-container"></div>
+                                        <div class="ripple-container"></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="basic_info">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating">
+                                        <label for="user_id" class="control-label">{{__('crud.'.$lang.'.user_id')}} *</label>
+                                        <select name="user_id" required style="margin: 0;padding: 0" id="user_id" class="form-control">
+                                            @foreach(\App\Models\User::all() as $user)
+                                                <option value="{{$user->getId()}}" @if($Object->user_id == $user->getId()) selected @endif>{{$user->getName()}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    @if ($errors->has('user_id'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('user_id') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        <label for="estate_type" class="control-label">{{__('crud.'.$lang.'.estate_type')}} *</label>
+                                        <select name="estate_type" required style="margin: 0;padding: 0" id="estate_type" class="form-control">
+                                            @foreach(\App\Helpers\Constant::ESTATE_TYPE as $type)
+                                                <option value="{{$type}}" @if($Object->estate_type == $type) selected @endif>{{__('crud.'.$lang.'.EstateTypes.'.$type)}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    @if ($errors->has('estate_type'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('estate_type') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group label-floating">
+                                        <label for="estate_offer_type" class="control-label">{{__('crud.'.$lang.'.estate_offer_type')}} *</label>
+                                        <select name="estate_offer_type" required style="margin: 0;padding: 0" id="estate_offer_type" class="form-control">
+                                            @foreach(\App\Helpers\Constant::ESTATE_OFFER_TYPE as $type)
+                                                <option value="{{$type}}" @if($Object->estate_offer_type == $type) selected @endif>{{__('crud.'.$lang.'.EstateOfferTypes.'.$type)}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    @if ($errors->has('estate_offer_type'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('estate_offer_type') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group label-floating">
+                                        <label for="city_id" class="control-label">{{__('crud.'.$lang.'.city_id')}} *</label>
+                                        <select name="city_id" required style="margin: 0;padding: 0" id="city_id" class="form-control">
+                                            @foreach(\App\Models\City::where('is_active',true)->get() as $city)
+                                                <option value="{{$city->getId()}}" @if($Object->city_id == $city->getId()) selected @endif>{{(app()->getLocale() =='ar')?$city->getNameAr():$city->getName()}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    @if ($errors->has('city_id'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('city_id') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group label-floating">
+                                        <label for="area_id" class="control-label">{{__('crud.'.$lang.'.area_id')}} *</label>
+                                        <select name="area_id" required style="margin: 0;padding: 0" id="area_id" class="form-control">
+                                            @foreach(\App\Models\Area::where('is_active',true)->get() as $area)
+                                                <option value="{{$area->getId()}}" @if($Object->area_id == $area->getId()) selected @endif>{{(app()->getLocale() =='ar')?$area->getNameAr():$area->getName()}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    @if ($errors->has('area_id'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('area_id') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group label-floating">
+                                        <label for="street" class="control-label">{{__('crud.'.$lang.'.street')}} *</label>
+                                        <input type="text" name="street" style="margin: 0;padding: 0" id="street" class="form-control" value="{{$Object->street}}">
+                                    </div>
+                                    @if ($errors->has('street'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('street') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group label-floating">
+                                        <label for="estate_area" class="control-label">{{__('crud.'.$lang.'.estate_area')}} *</label>
+                                        <input type="text" name="estate_area" style="margin: 0;padding: 0" id="estate_area" class="form-control" value="{{$Object->estate_area}}">
+                                    </div>
+                                    @if ($errors->has('estate_area'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('estate_area') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group label-floating">
+                                        <label for="price" class="control-label">{{__('crud.'.$lang.'.price')}} *</label>
+                                        <input type="text" name="price" style="margin: 0;padding: 0" id="price" class="form-control" value="{{$Object->price}}">
+                                    </div>
+                                    @if ($errors->has('price'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('price') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group label-floating">
+                                        <label for="currency_id" class="control-label">{{__('crud.'.$lang.'.currency_id')}} *</label>
+                                        <select name="currency_id" required style="margin: 0;padding: 0" id="currency_id" class="form-control">
+                                            @foreach(\App\Models\Currency::where('is_active',true)->get() as $currency)
+                                                <option value="{{$currency->getId()}}" @if($Object->currency_id == $currency->getId()) selected @endif>{{(app()->getLocale() =='ar')?$currency->getNameAr():$currency->getName()}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    @if ($errors->has('currency_id'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('currency_id') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row submit-btn">
+                                <button type="button" class="btn btn-primary" onclick="document.getElementById('estate_details_tab').click()" style="margin-left:15px;margin-right:15px;">{{__('admin.next')}}</button>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="estate_details">
+                            <div class="row">
+                                <div class="col-md-4 estate_details" id="land_area_div">
+                                    <div class="form-group label-floating">
+                                        <label for="land_area" class="control-label">{{__('crud.'.$lang.'.land_area')}} *</label>
+                                        <input type="text" name="land_area" style="margin: 0;padding: 0" id="land_area" class="form-control" value="{{$Object->land_area}}">
+                                    </div>
+                                    @if ($errors->has('land_area'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('land_area') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-4 estate_details" id="building_area_div">
+                                    <div class="form-group label-floating">
+                                        <label for="building_area" class="control-label">{{__('crud.'.$lang.'.building_area')}} *</label>
+                                        <input type="text" name="building_area" style="margin: 0;padding: 0" id="building_area" class="form-control" value="{{$Object->building_area}}">
+                                    </div>
+                                    @if ($errors->has('building_area'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('building_area') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-4 estate_details" id="building_age_div">
+                                    <div class="form-group label-floating">
+                                        <label for="building_age" class="control-label">{{__('crud.'.$lang.'.building_age')}} *</label>
+                                        <input type="text" name="building_age" style="margin: 0;padding: 0" id="building_age" class="form-control" value="{{$Object->building_age}}">
+                                    </div>
+                                    @if ($errors->has('building_age'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('building_age') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-4 estate_details" id="apartment_area_div">
+                                    <div class="form-group label-floating">
+                                        <label for="apartment_area" class="control-label">{{__('crud.'.$lang.'.apartment_area')}} *</label>
+                                        <input type="text" name="apartment_area" style="margin: 0;padding: 0" id="apartment_area" class="form-control" value="{{$Object->apartment_area}}">
+                                    </div>
+                                    @if ($errors->has('apartment_area'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('apartment_area') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-4 estate_details" id="apartment_floor_div">
+                                    <div class="form-group label-floating">
+                                        <label for="apartment_floor" class="control-label">{{__('crud.'.$lang.'.apartment_floor')}} *</label>
+                                        <input type="text" name="apartment_floor" style="margin: 0;padding: 0" id="apartment_floor" class="form-control" value="{{$Object->apartment_floor}}">
+                                    </div>
+                                    @if ($errors->has('apartment_floor'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('apartment_floor') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 estate_details" id="land_interface_div">
+                                    <div class="form-group label-floating">
+                                        <label for="land_interface" class="control-label">{{__('crud.'.$lang.'.land_interface')}} *</label>
+                                        <input type="text" name="land_interface" style="margin: 0;padding: 0" id="land_interface" class="form-control" value="{{$Object->land_interface}}">
+                                    </div>
+                                    @if ($errors->has('land_interface'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('land_interface') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 estate_details" id="shop_length_area_div">
+                                    <div class="form-group label-floating">
+                                        <label for="shop_length_area" class="control-label">{{__('crud.'.$lang.'.shop_length_area')}} *</label>
+                                        <input type="text" name="shop_length_area" style="margin: 0;padding: 0" id="shop_length_area" class="form-control" value="{{$Object->shop_length_area}}">
+                                    </div>
+                                    @if ($errors->has('shop_length_area'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('shop_length_area') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-6 estate_details" id="shop_width_area_div">
+                                    <div class="form-group label-floating">
+                                        <label for="shop_width_area" class="control-label">{{__('crud.'.$lang.'.shop_width_area')}} *</label>
+                                        <input type="text" name="shop_width_area" style="margin: 0;padding: 0" id="shop_width_area" class="form-control" value="{{$Object->shop_width_area}}">
+                                    </div>
+                                    @if ($errors->has('shop_width_area'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('shop_width_area') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row estate_details" id="house_details">
+                                <div class="col-md-3" id="room_no_div">
+                                    <div class="form-group label-floating">
+                                        <label for="room_no" class="control-label">{{__('crud.'.$lang.'.room_no')}} *</label>
+                                        <input type="text" name="room_no" style="margin: 0;padding: 0" id="room_no" class="form-control" value="{{$Object->room_no}}">
+                                    </div>
+                                    @if ($errors->has('room_no'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('room_no') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-3" id="bathroom_no_div">
+                                    <div class="form-group label-floating">
+                                        <label for="bathroom_no" class="control-label">{{__('crud.'.$lang.'.bathroom_no')}} *</label>
+                                        <input type="text" name="bathroom_no" style="margin: 0;padding: 0" id="bathroom_no" class="form-control" value="{{$Object->bathroom_no}}">
+                                    </div>
+                                    @if ($errors->has('bathroom_no'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('bathroom_no') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-3" id="halls_no_div">
+                                    <div class="form-group label-floating">
+                                        <label for="halls_no" class="control-label">{{__('crud.'.$lang.'.halls_no')}} *</label>
+                                        <input type="text" name="halls_no" style="margin: 0;padding: 0" id="halls_no" class="form-control" value="{{$Object->halls_no}}">
+                                    </div>
+                                    @if ($errors->has('halls_no'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('halls_no') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-3" id="floors_no_div">
+                                    <div class="form-group label-floating">
+                                        <label for="floors_no" class="control-label">{{__('crud.'.$lang.'.floors_no')}} *</label>
+                                        <input type="text" name="floors_no" style="margin: 0;padding: 0" id="floors_no" class="form-control" value="{{$Object->floors_no}}">
+                                    </div>
+                                    @if ($errors->has('floors_no'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('floors_no') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 estate_details" id="finishing_type_div">
+                                    <div class="form-group label-floating">
+                                        <label for="finishing_type" class="control-label">{{__('crud.'.$lang.'.finishing_type')}} *</label>
+                                        <select name="finishing_type" required style="margin: 0;padding: 0" id="finishing_type" class="form-control">
+                                            @foreach(\App\Helpers\Constant::FINISHING_TYPE as $type)
+                                                <option value="{{$type}}" @if($Object->finishing_type == $type) selected @endif>{{__('crud.'.$lang.'.FinishingTypes.'.$type)}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    @if ($errors->has('finishing_type'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('finishing_type') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 estate_details" id="description_div">
+                                    <div class="form-group label-floating">
+                                        <label for="description" class="control-label">{{__('crud.'.$lang.'.description')}} *</label>
+                                        <textarea type="text" name="description" style="margin: 0;padding: 0" id="description" class="form-control">{{$Object->description}}</textarea>
+                                    </div>
+                                    @if ($errors->has('description'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('description') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row estate_details" id="house_extra" >
+                                <div class="col-md-3" id="has_garage_div">
+                                    <div class="form-group">
+                                        <label for="has_garage" class="control-label">{{__('crud.'.$lang.'.has_garage')}}</label>
+                                        <input type="checkbox" id="has_garage"  @if($Object->has_garage) checked @endif  name="has_garage" class=" {{ $errors->has('has_garage') ? ' is-invalid' : '' }}">
+                                    </div>
+                                    @if ($errors->has('has_garage'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('has_garage') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-3" id="has_well_div">
+                                    <div class="form-group">
+                                        <label for="has_well" class="control-label">{{__('crud.'.$lang.'.has_well')}}</label>
+                                        <input type="checkbox" id="has_well"  @if($Object->has_well) checked @endif  name="has_well" class=" {{ $errors->has('has_well') ? ' is-invalid' : '' }}">
+                                    </div>
+                                    @if ($errors->has('has_well'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('has_well') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-3" id="has_public_street_view_div">
+                                    <div class="form-group">
+                                        <label for="has_public_street_view" class="control-label">{{__('crud.'.$lang.'.has_public_street_view')}}</label>
+                                        <input type="checkbox" id="has_public_street_view"  @if($Object->has_public_street_view) checked @endif  name="has_public_street_view" class=" {{ $errors->has('has_public_street_view') ? ' is-invalid' : '' }}">
+                                    </div>
+                                    @if ($errors->has('has_public_street_view'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('has_public_street_view') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-3" id="has_sea_view_div">
+                                    <div class="form-group">
+                                        <label for="has_sea_view" class="control-label">{{__('crud.'.$lang.'.has_sea_view')}}</label>
+                                        <input type="checkbox" id="has_sea_view"  @if($Object->has_sea_view) checked @endif  name="has_sea_view" class=" {{ $errors->has('has_sea_view') ? ' is-invalid' : '' }}">
+                                    </div>
+                                    @if ($errors->has('has_sea_view'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('has_sea_view') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row estate_details" id="schools">
+                                <div class="col-md-3" id="elementary_schools_no_div">
+                                    <div class="form-group label-floating">
+                                        <label for="elementary_schools_no" class="control-label">{{__('crud.'.$lang.'.elementary_schools_no')}} *</label>
+                                        <input type="text" name="elementary_schools_no" style="margin: 0;padding: 0" id="elementary_schools_no" class="form-control" value="{{$Object->elementary_schools_no}}">
+                                    </div>
+                                    @if ($errors->has('elementary_schools_no'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('elementary_schools_no') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-3" id="preparatory_schools_no_div">
+                                    <div class="form-group label-floating">
+                                        <label for="preparatory_schools_no" class="control-label">{{__('crud.'.$lang.'.preparatory_schools_no')}} *</label>
+                                        <input type="text" name="preparatory_schools_no" style="margin: 0;padding: 0" id="preparatory_schools_no" class="form-control" value="{{$Object->preparatory_schools_no}}">
+                                    </div>
+                                    @if ($errors->has('preparatory_schools_no'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('preparatory_schools_no') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-3" id="secondary_schools_no_div">
+                                    <div class="form-group label-floating">
+                                        <label for="secondary_schools_no" class="control-label">{{__('crud.'.$lang.'.secondary_schools_no')}} *</label>
+                                        <input type="text" name="secondary_schools_no" style="margin: 0;padding: 0" id="secondary_schools_no" class="form-control" value="{{$Object->secondary_schools_no}}">
+                                    </div>
+                                    @if ($errors->has('secondary_schools_no'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('secondary_schools_no') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-3" id="kindergarten_no_div">
+                                    <div class="form-group label-floating">
+                                        <label for="kindergarten_no" class="control-label">{{__('crud.'.$lang.'.kindergarten_no')}} *</label>
+                                        <input type="text" name="kindergarten_no" style="margin: 0;padding: 0" id="kindergarten_no" class="form-control" value="{{$Object->kindergarten_no}}">
+                                    </div>
+                                    @if ($errors->has('kindergarten_no'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('kindergarten_no') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row estate_details" id="nearby_places">
+                                <div class="col-md-2" id="pharmacy_no_div">
+                                    <div class="form-group">
+                                        <label for="pharmacy_no" class="control-label">{{__('crud.'.$lang.'.pharmacy_no')}}</label>
+                                        <input type="checkbox" id="pharmacy_no"  @if($Object->pharmacy_no) checked @endif  name="has_garage" class=" {{ $errors->has('pharmacy_no') ? ' is-invalid' : '' }}">
+                                    </div>
+                                    @if ($errors->has('pharmacy_no'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('pharmacy_no') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-2" id="mosque_no_div">
+                                    <div class="form-group">
+                                        <label for="mosque_no" class="control-label">{{__('crud.'.$lang.'.mosque_no')}}</label>
+                                        <input type="checkbox" id="mosque_no"  @if($Object->mosque_no) checked @endif  name="mosque_no" class=" {{ $errors->has('mosque_no') ? ' is-invalid' : '' }}">
+                                    </div>
+                                    @if ($errors->has('mosque_no'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('mosque_no') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-2" id="hospital_no_div">
+                                    <div class="form-group">
+                                        <label for="hospital_no" class="control-label">{{__('crud.'.$lang.'.hospital_no')}}</label>
+                                        <input type="checkbox" id="hospital_no"  @if($Object->hospital_no) checked @endif  name="hospital_no" class=" {{ $errors->has('hospital_no') ? ' is-invalid' : '' }}">
+                                    </div>
+                                    @if ($errors->has('hospital_no'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('hospital_no') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-2" id="bakery_no_div">
+                                    <div class="form-group">
+                                        <label for="bakery_no" class="control-label">{{__('crud.'.$lang.'.bakery_no')}}</label>
+                                        <input type="checkbox" id="bakery_no"  @if($Object->bakery_no) checked @endif  name="bakery_no" class=" {{ $errors->has('bakery_no') ? ' is-invalid' : '' }}">
+                                    </div>
+                                    @if ($errors->has('bakery_no'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('bakery_no') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-2" id="mall_no_div">
+                                    <div class="form-group">
+                                        <label for="mall_no" class="control-label">{{__('crud.'.$lang.'.mall_no')}}</label>
+                                        <input type="checkbox" id="mall_no"  @if($Object->mall_no) checked @endif  name="mall_no" class=" {{ $errors->has('mall_no') ? ' is-invalid' : '' }}">
+                                    </div>
+                                    @if ($errors->has('mall_no'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('mall_no') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row estate_details" id="land_details">
+                                <div class="col-md-3" id="is_residential_div">
+                                    <div class="form-group">
+                                        <label for="is_residential" class="control-label">{{__('crud.'.$lang.'.is_residential')}}</label>
+                                        <input type="checkbox" id="is_residential"  @if($Object->is_residential) checked @endif  name="is_residential" class=" {{ $errors->has('is_residential') ? ' is-invalid' : '' }}">
+                                    </div>
+                                    @if ($errors->has('is_residential'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('is_residential') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-3" id="is_agricultural_div">
+                                    <div class="form-group">
+                                        <label for="is_agricultural" class="control-label">{{__('crud.'.$lang.'.is_agricultural')}}</label>
+                                        <input type="checkbox" id="is_agricultural"  @if($Object->is_agricultural) checked @endif  name="is_agricultural" class=" {{ $errors->has('is_agricultural') ? ' is-invalid' : '' }}">
+                                    </div>
+                                    @if ($errors->has('is_agricultural'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('is_agricultural') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-3" id="is_commercial_div">
+                                    <div class="form-group">
+                                        <label for="is_commercial" class="control-label">{{__('crud.'.$lang.'.is_commercial')}}</label>
+                                        <input type="checkbox" id="is_commercial"  @if($Object->is_commercial) checked @endif  name="is_commercial" class=" {{ $errors->has('is_commercial') ? ' is-invalid' : '' }}">
+                                    </div>
+                                    @if ($errors->has('is_commercial'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('is_commercial') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-3" id="is_industrial_div">
+                                    <div class="form-group">
+                                        <label for="is_industrial" class="control-label">{{__('crud.'.$lang.'.is_industrial')}}</label>
+                                        <input type="checkbox" id="is_industrial"  @if($Object->is_industrial) checked @endif  name="is_industrial" class=" {{ $errors->has('is_industrial') ? ' is-invalid' : '' }}">
+                                    </div>
+                                    @if ($errors->has('is_industrial'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('is_industrial') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 estate_details" id="is_taboo_div">
+                                    <div class="form-group label-floating">
+                                        <label for="is_taboo" class="control-label">{{__('crud.'.$lang.'.is_taboo')}} *</label>
+                                        <select name="is_taboo" required style="margin: 0;padding: 0" id="is_taboo" class="form-control">
+                                            <option value="1" @if($Object->is_taboo == 1) selected @endif>{{__('admin.yes')}}</option>
+                                            <option value="0" @if($Object->is_taboo == 0) selected @endif>{{__('admin.no')}}</option>
+                                        </select>
+                                    </div>
+                                    @if ($errors->has('is_taboo'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('is_taboo') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 estate_details" id="has_attic_div">
+                                    <div class="form-group label-floating">
+                                        <label for="has_attic" class="control-label">{{__('crud.'.$lang.'.has_attic')}} *</label>
+                                        <select name="has_attic" required style="margin: 0;padding: 0" id="has_attic" class="form-control">
+                                            <option value="1" @if($Object->has_attic == 1) selected @endif>{{__('admin.yes')}}</option>
+                                            <option value="0" @if($Object->has_attic == 0) selected @endif>{{__('admin.no')}}</option>
+                                        </select>
+                                    </div>
+                                    @if ($errors->has('has_attic'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('has_attic') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row submit-btn">
+                                <button type="button" class="btn btn-primary" onclick="document.getElementById('estate_media_tab').click()" style="margin-left:15px;margin-right:15px;">{{__('admin.next')}}</button>
+                                <button type="button" class="btn btn-primary" onclick="document.getElementById('basic_info_tab').click()" style="margin-left:15px;margin-right:15px;">{{__('admin.previous')}}</button>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="estate_media">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="estate_media" class="control-label">{{__('crud.'.$lang.'.estate_media')}} *</label>
+                                    <input type="file" name="estate_media[]" id="estate_media" multiple class="">
+                                    @if ($errors->has('estate_media'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('estate_media') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="neighborhood_media" class="control-label">{{__('crud.'.$lang.'.neighborhood_media')}} *</label>
+                                    <input type="file" name="neighborhood_media[]" id="neighborhood_media" multiple class="">
+                                    @if ($errors->has('neighborhood_media'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('neighborhood_media') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row submit-btn">
+                                <button type="button" class="btn btn-primary" onclick="document.getElementById('payment_and_contact_tab').click()" style="margin-left:15px;margin-right:15px;">{{__('admin.next')}}</button>
+                                <button type="button" class="btn btn-primary" onclick="document.getElementById('estate_details_tab').click()" style="margin-left:15px;margin-right:15px;">{{__('admin.previous')}}</button>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="payment_and_contact">
+                            <div class="row">
+                                <div class="col-md-4" id="is_payment_type_cash_div">
+                                    <div class="form-group">
+                                        <label for="is_payment_type_cash" class="control-label">{{__('crud.'.$lang.'.is_payment_type_cash')}}</label>
+                                        <input type="checkbox" id="is_payment_type_cash"  @if($Object->is_payment_type_cash) checked @endif  name="is_payment_type_cash" class=" {{ $errors->has('is_payment_type_cash') ? ' is-invalid' : '' }}">
+                                    </div>
+                                    @if ($errors->has('is_payment_type_cash'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('is_payment_type_cash') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-4" id="is_payment_type_installment_div">
+                                    <div class="form-group">
+                                        <label for="is_payment_type_installment" class="control-label">{{__('crud.'.$lang.'.is_payment_type_installment')}}</label>
+                                        <input type="checkbox" id="is_payment_type_installment"  @if($Object->is_payment_type_installment) checked @endif  name="is_payment_type_installment" class=" {{ $errors->has('is_payment_type_installment') ? ' is-invalid' : '' }}">
+                                    </div>
+                                    @if ($errors->has('is_payment_type_installment'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('is_payment_type_installment') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-4" id="is_payment_type_switching_div">
+                                    <div class="form-group">
+                                        <label for="is_payment_type_switching" class="control-label">{{__('crud.'.$lang.'.is_payment_type_switching')}}</label>
+                                        <input type="checkbox" id="is_payment_type_switching"  @if($Object->is_payment_type_switching) checked @endif  name="is_payment_type_switching" class=" {{ $errors->has('is_payment_type_switching') ? ' is-invalid' : '' }}">
+                                    </div>
+                                    @if ($errors->has('is_payment_type_switching'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('is_payment_type_switching') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12" id="contact_name_div">
+                                    <div class="form-group label-floating">
+                                        <label for="contact_name" class="control-label">{{__('crud.'.$lang.'.contact_name')}} *</label>
+                                        <input type="text" name="contact_name" style="margin: 0;padding: 0" id="contact_name" class="form-control" value="{{$Object->contact_name}}">
+                                    </div>
+                                    @if ($errors->has('contact_name'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('contact_name') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4" id="contact_identity_div">
+                                    <div class="form-group label-floating">
+                                        <label for="contact_identity" class="control-label">{{__('crud.'.$lang.'.contact_identity')}} *</label>
+                                        <input type="text" name="contact_identity" style="margin: 0;padding: 0" id="contact_identity" class="form-control" value="{{$Object->contact_identity}}">
+                                    </div>
+                                    @if ($errors->has('contact_identity'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('contact_identity') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-4" id="contact_mobile1_div">
+                                    <div class="form-group label-floating">
+                                        <label for="contact_mobile1" class="control-label">{{__('crud.'.$lang.'.contact_mobile1')}} *</label>
+                                        <input type="text" name="contact_mobile1" style="margin: 0;padding: 0" id="contact_mobile1" class="form-control" value="{{$Object->contact_mobile1}}">
+                                    </div>
+                                    @if ($errors->has('contact_mobile1'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('contact_mobile1') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-4" id="contact_mobile2_div">
+                                    <div class="form-group label-floating">
+                                        <label for="contact_mobile2" class="control-label">{{__('crud.'.$lang.'.contact_mobile2')}} *</label>
+                                        <input type="text" name="contact_mobile2" style="margin: 0;padding: 0" id="contact_mobile2" class="form-control" value="{{$Object->contact_mobile2}}">
+                                    </div>
+                                    @if ($errors->has('contact_mobile2'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('contact_mobile2') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6" id="lat_div">
+                                    <div class="form-group label-floating">
+                                        <label for="lat" class="control-label">{{__('crud.'.$lang.'.lat')}}</label>
+                                        <input type="text" name="lat" style="margin: 0;padding: 0" id="lat" class="form-control" value="{{$Object->lat}}">
+                                    </div>
+                                    @if ($errors->has('lat'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('lat') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="col-md-6" id="lng_div">
+                                    <div class="form-group label-floating">
+                                        <label for="lng" class="control-label">{{__('crud.'.$lang.'.lng')}}</label>
+                                        <input type="text" name="lng" style="margin: 0;padding: 0" id="lng" class="form-control" value="{{$Object->lng}}">
+                                    </div>
+                                    @if ($errors->has('lng'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('lng') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row submit-btn">
+                                <button type="submit" class="btn btn-primary" style="margin-left:15px;margin-right:15px;">{{__('admin.save')}}</button>
+                                <button type="button" class="btn btn-primary" onclick="document.getElementById('estate_media_tab').click()" style="margin-left:15px;margin-right:15px;">{{__('admin.previous')}}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+@endsection
+@section('script')
+    <script>
+        $(document).on('change','#estate_type',function (){
+            let type = $(this).val();
+            $('.estate_details').hide();
+            if (type === '{{\App\Helpers\Constant::ESTATE_TYPE['House']}}'){
+                $('#land_area_div').show();
+                $('#building_area_div').show();
+                $('#building_age_div').show();
+                $('#house_details').show();
+                $('#finishing_type_div').show();
+                $('#house_extra').show();
+                $('#schools').show();
+                $('#nearby_places').show();
+                $('#description_div').show();
+            }
+            if (type === '{{\App\Helpers\Constant::ESTATE_TYPE['Apartment']}}'){
+                $('#apartment_floor_div').show();
+                $('#apartment_area_div').show();
+                $('#building_age_div').show();
+                $('#house_details').show();
+                $('#finishing_type_div').show();
+                $('#house_extra').show();
+                $('#schools').show();
+                $('#nearby_places').show();
+                $('#description_div').show();
+            }
+            if (type === '{{\App\Helpers\Constant::ESTATE_TYPE['Land']}}'){
+                $('#land_interface_div').show();
+                $('#land_details').show();
+                $('#is_taboo_div').show();
+                $('#description_div').show();
+            }
+            if (type === '{{\App\Helpers\Constant::ESTATE_TYPE['Shop']}}'){
+                $('#shop_length_area_div').show();
+                $('#shop_width_area_div').show();
+                $('#finishing_type_div').show();
+                $('#has_attic_div').show();
+                $('#description_div').show();
+            }
+        });
+        $('#estate_type').trigger('change');
+    </script>
+@endsection

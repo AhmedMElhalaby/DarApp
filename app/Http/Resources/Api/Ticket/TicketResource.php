@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources\Api\Ticket;
 
+use App\Http\Resources\Api\Home\LawyerResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -17,6 +18,8 @@ class TicketResource extends JsonResource
     {
         $Objects = array();
         $Objects['id'] = $this->id;
+        $Objects['lawyer_id'] = $this->getLawyerId();
+        $Objects['Lawyer'] = new LawyerResource($this->lawyer);
         $Objects['title'] = $this->getTitle();
         $Objects['message'] = $this->getMessage();
         $Objects['attachment'] = $this->getAttachment();

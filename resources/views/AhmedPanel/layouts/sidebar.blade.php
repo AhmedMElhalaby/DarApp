@@ -100,6 +100,26 @@
     </div>
 </li>
 @endif
+@if (auth('admin')->user()->can('estates'))
+    <li class="nav-item ">
+        <a class="nav-link collapsed" data-toggle="collapse" href="#app_content" aria-expanded="false">
+            <i class="material-icons">keyboard_arrow_down</i>
+            <p> {{__('admin.sidebar.app_content')}}</p>
+        </a>
+        <div class="collapse @if(strpos(url()->current() , url('admin/app_content'))===0) in @endif" id="app_content" @if(strpos(url()->current() , url('admin/app_content'))===0) aria-expanded="true" @endif>
+            <ul class="nav">
+                @if (auth('admin')->user()->can('Estates'))
+                    <li class="nav-item @if(strpos(url()->current() , url('admin/app_content/estates'))===0) active @endif">
+                        <a href="{{url('admin/app_content/estates')}}" class="nav-link">
+                            <i class="material-icons">location_city</i>
+                            <p>{{__('admin.sidebar.estates')}}</p>
+                        </a>
+                    </li>
+                @endif
+            </ul>
+        </div>
+    </li>
+@endif
 @if (auth('admin')->user()->can('Users') || auth('admin')->user()->can('Tickets') )
     <li class="nav-item ">
         <a class="nav-link collapsed" data-toggle="collapse" href="#user_managements" aria-expanded="false">

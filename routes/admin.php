@@ -190,6 +190,29 @@ Route::group([
     });
     /*
     |--------------------------------------------------------------------------
+    | Admin > App Content
+    |--------------------------------------------------------------------------
+    | Here is where App Content routes
+    */
+    Route::group([
+        'prefix'=>'app_content',
+        'namespace'=>'AppContent',
+    ],function () {
+        Route::group([
+            'prefix'=>'estates'
+        ],function () {
+            Route::get('/','EstateController@index');
+            Route::get('/create','EstateController@create');
+            Route::post('/','EstateController@store');
+            Route::get('/{estate}','EstateController@show');
+            Route::get('/{estate}/edit','EstateController@edit');
+            Route::put('/{estate}','EstateController@update');
+            Route::delete('/{estate}','EstateController@destroy');
+            Route::get('/option/export','EstateController@export');
+        });
+    });
+    /*
+    |--------------------------------------------------------------------------
     | Admin > App Users
     |--------------------------------------------------------------------------
     | Here is where App Users routes

@@ -19,6 +19,8 @@ return [
         'user_managements'=>'Users Managements',
         'app_auctions'=>'App Auctions',
         'app_data'=>'App Data',
+        'app_content'=>'App Content',
+        'estates'=>'Estates',
         'admins'=>'Admins',
         'settings'=>'Settings',
         'faqs'=>'FAQ',
@@ -52,6 +54,8 @@ return [
     'sure_to_finish' => 'Are You Sure You Want To Finish ',
     'cancel' => 'Cancel',
     'save' => 'Save',
+    'next' => 'Next',
+    'previous' => 'Previous',
     'close' => 'Close',
     'export' => 'Export',
     'add' => 'Add',
@@ -67,6 +71,8 @@ return [
     'minute' => 'Minutes',
     'the_minute' => 'Minute',
     'finish' => 'Finish',
+    'yes' => 'Yes',
+    'no' => 'No',
 
 /////////////////////// Response Messages ////////////////////////
     'messages'=>[

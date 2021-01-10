@@ -70,4 +70,8 @@ class Constant
         'Estate Media'=>1,
         'Estate Neighborhood Media'=>2,
     ];
+    const ADMIN_TYPES = [
+        'Admin'=>1,
+        'Lawyer'=>2,
+    ];
 }

@@ -25,6 +25,7 @@ class InstallSeeder extends Seeder
         $Admin->setName('Admin');
         $Admin->setEmail('admin@admin.com');
         $Admin->setPassword('123456');
+        $Admin->setType(Constant::ADMIN_TYPES['Admin']);
         $Admin->save();
         $Role = new Role();
         $Role->setName('Admin');

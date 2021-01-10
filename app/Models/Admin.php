@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Hash;
  * @property string password
  * @property mixed remember_token
  * @property mixed avatar
+ * @property mixed type
  * @property boolean is_active
  * @method Admin find(int $id)
  */
@@ -21,7 +22,7 @@ class Admin extends Authenticatable
 {
     use Notifiable;
 
-    protected $fillable = [ 'name','email','password','remember_token','avatar','is_active'];
+    protected $fillable = [ 'name','email','password','remember_token','avatar','type','is_active'];
 
     protected $hidden = ['password'];
 
@@ -158,7 +159,7 @@ class Admin extends Authenticatable
      */
     public function getAvatar()
     {
-        return $this->avatar;
+        return ($this->avatar)?asset($this->avatar):null;
     }
 
     /**
@@ -167,6 +168,22 @@ class Admin extends Authenticatable
     public function setAvatar($avatar): void
     {
         $this->avatar = $avatar;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param mixed $type
+     */
+    public function setType($type): void
+    {
+        $this->type = $type;
     }
 
     /**
