@@ -65,8 +65,8 @@
                                     <div class="form-group label-floating">
                                         <label for="estate_type" class="control-label">{{__('crud.'.$lang.'.estate_type')}} *</label>
                                         <select name="estate_type" required style="margin: 0;padding: 0" id="estate_type" class="form-control">
-                                            @foreach(\App\Helpers\Constant::ESTATE_TYPE as $type)
-                                                <option value="{{$type}}" @if($Object->estate_type == $type) selected @endif>{{__('crud.'.$lang.'.EstateTypes.'.$type)}}</option>
+                                            @foreach(\App\Models\EstateType::all() as $estate_type)
+                                                <option value="{{$estate_type->getId()}}" @if(old('estate_type') == $estate_type->getId()) selected @endif>{{app()->getLocale() == 'ar'?$estate_type->getNameAr():$estate_type->getName()}}</option>
                                             @endforeach
                                         </select>
                                     </div>

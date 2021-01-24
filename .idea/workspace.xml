@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f6c06b2-2883-4aa3-bed7-dac8c325c520" name="Default Changelist" comment="update" />
+    <list default="true" id="7f6c06b2-2883-4aa3-bed7-dac8c325c520" name="Default Changelist" comment="update">
+      <change beforePath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/edit.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -242,7 +244,7 @@
       <workItem from="1610383364275" duration="22000" />
       <workItem from="1610957126018" duration="717000" />
       <workItem from="1610994927235" duration="35000" />
-      <workItem from="1611504838548" duration="10018000" />
+      <workItem from="1611504838548" duration="10230000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1605265283537</created>
