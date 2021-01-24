@@ -269,8 +269,8 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="row estate_details" id="house_details">
-                                <div class="col-md-3" id="room_no_div">
+                            <div class="row">
+                                <div class="col-md-3 estate_details" id="room_no_div">
                                     <div class="form-group label-floating">
                                         <label for="room_no" class="control-label">{{__('crud.'.$lang.'.room_no')}} *</label>
                                         <input type="text" name="room_no" style="margin: 0;padding: 0" id="room_no" class="form-control" value="{{$Object->room_no}}">
@@ -281,7 +281,7 @@
                                     </span>
                                     @endif
                                 </div>
-                                <div class="col-md-3" id="bathroom_no_div">
+                                <div class="col-md-3 estate_details" id="bathroom_no_div">
                                     <div class="form-group label-floating">
                                         <label for="bathroom_no" class="control-label">{{__('crud.'.$lang.'.bathroom_no')}} *</label>
                                         <input type="text" name="bathroom_no" style="margin: 0;padding: 0" id="bathroom_no" class="form-control" value="{{$Object->bathroom_no}}">
@@ -292,7 +292,7 @@
                                     </span>
                                     @endif
                                 </div>
-                                <div class="col-md-3" id="halls_no_div">
+                                <div class="col-md-3 estate_details" id="halls_no_div">
                                     <div class="form-group label-floating">
                                         <label for="halls_no" class="control-label">{{__('crud.'.$lang.'.halls_no')}} *</label>
                                         <input type="text" name="halls_no" style="margin: 0;padding: 0" id="halls_no" class="form-control" value="{{$Object->halls_no}}">
@@ -303,7 +303,7 @@
                                     </span>
                                     @endif
                                 </div>
-                                <div class="col-md-3" id="floors_no_div">
+                                <div class="col-md-3 estate_details" id="floors_no_div">
                                     <div class="form-group label-floating">
                                         <label for="floors_no" class="control-label">{{__('crud.'.$lang.'.floors_no')}} *</label>
                                         <input type="text" name="floors_no" style="margin: 0;padding: 0" id="floors_no" class="form-control" value="{{$Object->floors_no}}">
@@ -345,8 +345,8 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="row estate_details" id="house_extra" >
-                                <div class="col-md-3" id="has_garage_div">
+                            <div class="row">
+                                <div class="col-md-3 estate_details" id="has_garage_div">
                                     <div class="form-group">
                                         <label for="has_garage" class="control-label">{{__('crud.'.$lang.'.has_garage')}}</label>
                                         <input type="checkbox" id="has_garage"  @if($Object->has_garage) checked @endif  name="has_garage" class=" {{ $errors->has('has_garage') ? ' is-invalid' : '' }}">
@@ -357,7 +357,7 @@
                                     </span>
                                     @endif
                                 </div>
-                                <div class="col-md-3" id="has_well_div">
+                                <div class="col-md-3 estate_details" id="has_well_div">
                                     <div class="form-group">
                                         <label for="has_well" class="control-label">{{__('crud.'.$lang.'.has_well')}}</label>
                                         <input type="checkbox" id="has_well"  @if($Object->has_well) checked @endif  name="has_well" class=" {{ $errors->has('has_well') ? ' is-invalid' : '' }}">
@@ -368,7 +368,7 @@
                                     </span>
                                     @endif
                                 </div>
-                                <div class="col-md-3" id="has_public_street_view_div">
+                                <div class="col-md-3 estate_details" id="has_public_street_view_div">
                                     <div class="form-group">
                                         <label for="has_public_street_view" class="control-label">{{__('crud.'.$lang.'.has_public_street_view')}}</label>
                                         <input type="checkbox" id="has_public_street_view"  @if($Object->has_public_street_view) checked @endif  name="has_public_street_view" class=" {{ $errors->has('has_public_street_view') ? ' is-invalid' : '' }}">
@@ -379,7 +379,7 @@
                                     </span>
                                     @endif
                                 </div>
-                                <div class="col-md-3" id="has_sea_view_div">
+                                <div class="col-md-3 estate_details" id="has_sea_view_div">
                                     <div class="form-group">
                                         <label for="has_sea_view" class="control-label">{{__('crud.'.$lang.'.has_sea_view')}}</label>
                                         <input type="checkbox" id="has_sea_view"  @if($Object->has_sea_view) checked @endif  name="has_sea_view" class=" {{ $errors->has('has_sea_view') ? ' is-invalid' : '' }}">
@@ -391,8 +391,8 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="row estate_details" id="schools">
-                                <div class="col-md-3" id="elementary_schools_no_div">
+                            <div class="row">
+                                <div class="col-md-3 estate_details" id="elementary_schools_no_div">
                                     <div class="form-group label-floating">
                                         <label for="elementary_schools_no" class="control-label">{{__('crud.'.$lang.'.elementary_schools_no')}} *</label>
                                         <input type="text" name="elementary_schools_no" style="margin: 0;padding: 0" id="elementary_schools_no" class="form-control" value="{{$Object->elementary_schools_no}}">
@@ -403,7 +403,7 @@
                                     </span>
                                     @endif
                                 </div>
-                                <div class="col-md-3" id="preparatory_schools_no_div">
+                                <div class="col-md-3 estate_details" id="preparatory_schools_no_div">
                                     <div class="form-group label-floating">
                                         <label for="preparatory_schools_no" class="control-label">{{__('crud.'.$lang.'.preparatory_schools_no')}} *</label>
                                         <input type="text" name="preparatory_schools_no" style="margin: 0;padding: 0" id="preparatory_schools_no" class="form-control" value="{{$Object->preparatory_schools_no}}">
@@ -414,7 +414,7 @@
                                     </span>
                                     @endif
                                 </div>
-                                <div class="col-md-3" id="secondary_schools_no_div">
+                                <div class="col-md-3 estate_details" id="secondary_schools_no_div">
                                     <div class="form-group label-floating">
                                         <label for="secondary_schools_no" class="control-label">{{__('crud.'.$lang.'.secondary_schools_no')}} *</label>
                                         <input type="text" name="secondary_schools_no" style="margin: 0;padding: 0" id="secondary_schools_no" class="form-control" value="{{$Object->secondary_schools_no}}">
@@ -425,7 +425,7 @@
                                     </span>
                                     @endif
                                 </div>
-                                <div class="col-md-3" id="kindergarten_no_div">
+                                <div class="col-md-3 estate_details" id="kindergarten_no_div">
                                     <div class="form-group label-floating">
                                         <label for="kindergarten_no" class="control-label">{{__('crud.'.$lang.'.kindergarten_no')}} *</label>
                                         <input type="text" name="kindergarten_no" style="margin: 0;padding: 0" id="kindergarten_no" class="form-control" value="{{$Object->kindergarten_no}}">
@@ -437,8 +437,8 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="row estate_details" id="nearby_places">
-                                <div class="col-md-2" id="pharmacy_no_div">
+                            <div class="row">
+                                <div class="col-md-2 estate_details" id="pharmacy_no_div">
                                     <div class="form-group">
                                         <label for="pharmacy_no" class="control-label">{{__('crud.'.$lang.'.pharmacy_no')}}</label>
                                         <input type="checkbox" id="pharmacy_no"  @if($Object->pharmacy_no) checked @endif  name="has_garage" class=" {{ $errors->has('pharmacy_no') ? ' is-invalid' : '' }}">
@@ -449,7 +449,7 @@
                                     </span>
                                     @endif
                                 </div>
-                                <div class="col-md-2" id="mosque_no_div">
+                                <div class="col-md-2 estate_details" id="mosque_no_div">
                                     <div class="form-group">
                                         <label for="mosque_no" class="control-label">{{__('crud.'.$lang.'.mosque_no')}}</label>
                                         <input type="checkbox" id="mosque_no"  @if($Object->mosque_no) checked @endif  name="mosque_no" class=" {{ $errors->has('mosque_no') ? ' is-invalid' : '' }}">
@@ -460,7 +460,7 @@
                                     </span>
                                     @endif
                                 </div>
-                                <div class="col-md-2" id="hospital_no_div">
+                                <div class="col-md-2 estate_details" id="hospital_no_div">
                                     <div class="form-group">
                                         <label for="hospital_no" class="control-label">{{__('crud.'.$lang.'.hospital_no')}}</label>
                                         <input type="checkbox" id="hospital_no"  @if($Object->hospital_no) checked @endif  name="hospital_no" class=" {{ $errors->has('hospital_no') ? ' is-invalid' : '' }}">
@@ -471,7 +471,7 @@
                                     </span>
                                     @endif
                                 </div>
-                                <div class="col-md-2" id="bakery_no_div">
+                                <div class="col-md-2 estate_details" id="bakery_no_div">
                                     <div class="form-group">
                                         <label for="bakery_no" class="control-label">{{__('crud.'.$lang.'.bakery_no')}}</label>
                                         <input type="checkbox" id="bakery_no"  @if($Object->bakery_no) checked @endif  name="bakery_no" class=" {{ $errors->has('bakery_no') ? ' is-invalid' : '' }}">
@@ -482,7 +482,7 @@
                                     </span>
                                     @endif
                                 </div>
-                                <div class="col-md-2" id="mall_no_div">
+                                <div class="col-md-2 estate_details" id="mall_no_div">
                                     <div class="form-group">
                                         <label for="mall_no" class="control-label">{{__('crud.'.$lang.'.mall_no')}}</label>
                                         <input type="checkbox" id="mall_no"  @if($Object->mall_no) checked @endif  name="mall_no" class=" {{ $errors->has('mall_no') ? ' is-invalid' : '' }}">
@@ -494,8 +494,8 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="row estate_details" id="land_details">
-                                <div class="col-md-3" id="is_residential_div">
+                            <div class="row">
+                                <div class="col-md-3 estate_details" id="is_residential_div">
                                     <div class="form-group">
                                         <label for="is_residential" class="control-label">{{__('crud.'.$lang.'.is_residential')}}</label>
                                         <input type="checkbox" id="is_residential"  @if($Object->is_residential) checked @endif  name="is_residential" class=" {{ $errors->has('is_residential') ? ' is-invalid' : '' }}">
@@ -506,7 +506,7 @@
                                     </span>
                                     @endif
                                 </div>
-                                <div class="col-md-3" id="is_agricultural_div">
+                                <div class="col-md-3 estate_details" id="is_agricultural_div">
                                     <div class="form-group">
                                         <label for="is_agricultural" class="control-label">{{__('crud.'.$lang.'.is_agricultural')}}</label>
                                         <input type="checkbox" id="is_agricultural"  @if($Object->is_agricultural) checked @endif  name="is_agricultural" class=" {{ $errors->has('is_agricultural') ? ' is-invalid' : '' }}">
@@ -517,7 +517,7 @@
                                     </span>
                                     @endif
                                 </div>
-                                <div class="col-md-3" id="is_commercial_div">
+                                <div class="col-md-3 estate_details" id="is_commercial_div">
                                     <div class="form-group">
                                         <label for="is_commercial" class="control-label">{{__('crud.'.$lang.'.is_commercial')}}</label>
                                         <input type="checkbox" id="is_commercial"  @if($Object->is_commercial) checked @endif  name="is_commercial" class=" {{ $errors->has('is_commercial') ? ' is-invalid' : '' }}">
@@ -528,7 +528,7 @@
                                     </span>
                                     @endif
                                 </div>
-                                <div class="col-md-3" id="is_industrial_div">
+                                <div class="col-md-3 estate_details" id="is_industrial_div">
                                     <div class="form-group">
                                         <label for="is_industrial" class="control-label">{{__('crud.'.$lang.'.is_industrial')}}</label>
                                         <input type="checkbox" id="is_industrial"  @if($Object->is_industrial) checked @endif  name="is_industrial" class=" {{ $errors->has('is_industrial') ? ' is-invalid' : '' }}">
@@ -729,41 +729,38 @@
         $(document).on('change','#estate_type',function (){
             let type = $(this).val();
             $('.estate_details').hide();
-            if (type === '{{\App\Helpers\Constant::ESTATE_TYPE['House']}}'){
-                $('#land_area_div').show();
-                $('#building_area_div').show();
-                $('#building_age_div').show();
-                $('#house_details').show();
-                $('#finishing_type_div').show();
-                $('#house_extra').show();
-                $('#schools').show();
-                $('#nearby_places').show();
-                $('#description_div').show();
-            }
-            if (type === '{{\App\Helpers\Constant::ESTATE_TYPE['Apartment']}}'){
-                $('#apartment_floor_div').show();
-                $('#apartment_area_div').show();
-                $('#building_age_div').show();
-                $('#house_details').show();
-                $('#finishing_type_div').show();
-                $('#house_extra').show();
-                $('#schools').show();
-                $('#nearby_places').show();
-                $('#description_div').show();
-            }
-            if (type === '{{\App\Helpers\Constant::ESTATE_TYPE['Land']}}'){
-                $('#land_interface_div').show();
-                $('#land_details').show();
-                $('#is_taboo_div').show();
-                $('#description_div').show();
-            }
-            if (type === '{{\App\Helpers\Constant::ESTATE_TYPE['Shop']}}'){
-                $('#shop_length_area_div').show();
-                $('#shop_width_area_div').show();
-                $('#finishing_type_div').show();
-                $('#has_attic_div').show();
-                $('#description_div').show();
-            }
+            $.get('{{url('admin/estate_type')}}',{estate_type:type},function (response){
+                let data = response.EstateType;
+                if (data.land_area){$('#land_area_div').show();}
+                if (data.building_area){$('#building_area_div').show();}
+                if (data.building_age){$('#building_age_div').show();}
+                if (data.apartment_area){$('#apartment_area_div').show();}
+                if (data.apartment_floor){$('#apartment_floor_div').show();}
+                if (data.land_interface){$('#land_interface_div').show();}
+                if (data.shop_length_area){$('#shop_length_area_div').show();}
+                if (data.shop_width_area){$('#shop_width_area_div').show();}
+                if (data.room_no){$('#room_no_div').show();}
+                if (data.bathroom_no){$('#bathroom_no_div').show();}
+                if (data.halls_no){$('#halls_no_div').show();}
+                if (data.floors_no){$('#floors_no_div').show();}
+                if (data.finishing_type){$('#finishing_type_div').show();}
+                if (data.description){$('#description_div').show();}
+                if (data.has_garage){$('#has_garage_div').show();}
+                if (data.has_well){$('#has_well_div').show();}
+                if (data.has_public_street_view){$('#has_public_street_view_div').show();}
+                if (data.has_sea_view){$('#has_sea_view_div').show();}
+                if (data.elementary_schools_no){$('#elementary_schools_no_div').show();}
+                if (data.preparatory_schools_no){$('#preparatory_schools_no_div').show();}
+                if (data.secondary_schools_no){$('#secondary_schools_no_div').show();}
+                if (data.kindergarten_no){$('#kindergarten_no_div').show();}
+                if (data.pharmacy_no){$('#pharmacy_no_div').show();}
+                if (data.mosque_no){$('#mosque_no_div').show();}
+                if (data.hospital_no){$('#hospital_no_div').show();}
+                if (data.bakery_no){$('#bakery_no_div').show();}
+                if (data.mall_no){$('#mall_no_div').show();}
+                if (data.is_residential){$('#is_residential_div').show();}
+                if (data.is_agricultural){$('#is_agricultural_div').show();}
+            });
         });
         $('#estate_type').trigger('change');
     </script>
