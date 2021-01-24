@@ -730,35 +730,35 @@
             $('.estate_details').hide();
             $.get('{{url('admin/estate_type')}}',{estate_type:type},function (response){
                 let data = response.EstateType;
-                if (data.land_area){$('#land_area_div').show();}
-                if (data.building_area){$('#building_area_div').show();}
-                if (data.building_age){$('#building_age_div').show();}
-                if (data.apartment_area){$('#apartment_area_div').show();}
-                if (data.apartment_floor){$('#apartment_floor_div').show();}
-                if (data.land_interface){$('#land_interface_div').show();}
-                if (data.shop_length_area){$('#shop_length_area_div').show();}
-                if (data.shop_width_area){$('#shop_width_area_div').show();}
-                if (data.room_no){$('#room_no_div').show();}
-                if (data.bathroom_no){$('#bathroom_no_div').show();}
-                if (data.halls_no){$('#halls_no_div').show();}
-                if (data.floors_no){$('#floors_no_div').show();}
-                if (data.finishing_type){$('#finishing_type_div').show();}
-                if (data.description){$('#description_div').show();}
-                if (data.has_garage){$('#has_garage_div').show();}
-                if (data.has_well){$('#has_well_div').show();}
-                if (data.has_public_street_view){$('#has_public_street_view_div').show();}
-                if (data.has_sea_view){$('#has_sea_view_div').show();}
-                if (data.elementary_schools_no){$('#elementary_schools_no_div').show();}
-                if (data.preparatory_schools_no){$('#preparatory_schools_no_div').show();}
-                if (data.secondary_schools_no){$('#secondary_schools_no_div').show();}
-                if (data.kindergarten_no){$('#kindergarten_no_div').show();}
-                if (data.pharmacy_no){$('#pharmacy_no_div').show();}
-                if (data.mosque_no){$('#mosque_no_div').show();}
-                if (data.hospital_no){$('#hospital_no_div').show();}
-                if (data.bakery_no){$('#bakery_no_div').show();}
-                if (data.mall_no){$('#mall_no_div').show();}
-                if (data.is_residential){$('#is_residential_div').show();}
-                if (data.is_agricultural){$('#is_agricultural_div').show();}
+                if (data.land_area === 1){$('#land_area_div').show();}
+                if (data.building_area === 1){$('#building_area_div').show();}
+                if (data.building_age === 1){$('#building_age_div').show();}
+                if (data.apartment_area === 1){$('#apartment_area_div').show();}
+                if (data.apartment_floor === 1){$('#apartment_floor_div').show();}
+                if (data.land_interface === 1){$('#land_interface_div').show();}
+                if (data.shop_length_area === 1){$('#shop_length_area_div').show();}
+                if (data.shop_width_area === 1){$('#shop_width_area_div').show();}
+                if (data.room_no === 1){$('#room_no_div').show();}
+                if (data.bathroom_no === 1){$('#bathroom_no_div').show();}
+                if (data.halls_no === 1){$('#halls_no_div').show();}
+                if (data.floors_no === 1){$('#floors_no_div').show();}
+                if (data.finishing_type === 1){$('#finishing_type_div').show();}
+                if (data.description === 1){$('#description_div').show();}
+                if (data.has_garage === 1){$('#has_garage_div').show();}
+                if (data.has_well === 1){$('#has_well_div').show();}
+                if (data.has_public_street_view === 1){$('#has_public_street_view_div').show();}
+                if (data.has_sea_view === 1){$('#has_sea_view_div').show();}
+                if (data.elementary_schools_no === 1){$('#elementary_schools_no_div').show();}
+                if (data.preparatory_schools_no === 1){$('#preparatory_schools_no_div').show();}
+                if (data.secondary_schools_no === 1){$('#secondary_schools_no_div').show();}
+                if (data.kindergarten_no === 1){$('#kindergarten_no_div').show();}
+                if (data.pharmacy_no === 1){$('#pharmacy_no_div').show();}
+                if (data.mosque_no === 1){$('#mosque_no_div').show();}
+                if (data.hospital_no === 1){$('#hospital_no_div').show();}
+                if (data.bakery_no === 1){$('#bakery_no_div').show();}
+                if (data.mall_no === 1){$('#mall_no_div').show();}
+                if (data.is_residential === 1){$('#is_residential_div').show();}
+                if (data.is_agricultural === 1){$('#is_agricultural_div').show();}
             });
         });
         $('#estate_type').trigger('change');
