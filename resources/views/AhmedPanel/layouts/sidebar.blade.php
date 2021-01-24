@@ -88,6 +88,14 @@
                     </a>
                 </li>
             @endif
+            @if (auth('admin')->user()->can('EstateTypes'))
+                <li class="nav-item @if(strpos(url()->current() , url('admin/app_data/estate_types'))===0) active @endif">
+                    <a href="{{url('admin/app_data/estate_types')}}" class="nav-link">
+                        <i class="material-icons">category</i>
+                        <p>{{__('admin.sidebar.estate_types')}}</p>
+                    </a>
+                </li>
+            @endif
 {{--            @if (auth('admin')->user()->can('BankAccounts'))--}}
 {{--                <li class="nav-item @if(strpos(url()->current() , url('admin/app_data/bank_accounts'))===0) active @endif">--}}
 {{--                    <a href="{{url('admin/app_data/bank_accounts')}}" class="nav-link">--}}

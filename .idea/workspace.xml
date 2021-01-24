@@ -5,28 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f6c06b2-2883-4aa3-bed7-dac8c325c520" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppContent/EstateController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/AppContent/Estate/StoreRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/AppContent/Estate/UpdateRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Home/LawyerResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppData/EstateTypeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/Home/EstateTypeRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Home/EstateTypeResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/EstateType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_24_164716_create_estate_types_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/base/fields/checkbox.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Helpers/Constant.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/Constant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppManagement/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppManagement/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppContent/EstateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppContent/EstateController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/AppContent/Estate/StoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/AppContent/Estate/StoreRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/AppContent/Estate/UpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/AppContent/Estate/UpdateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/AhmedPanel/StoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/AhmedPanel/StoreRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/AhmedPanel/UpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/AhmedPanel/UpdateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/StoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/StoreRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/UpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/UpdateRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Requests/Api/Home/InstallRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Home/InstallRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Api/Ticket/StoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Ticket/StoreRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Api/Ticket/TicketResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Ticket/TicketResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Ticket.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Ticket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_26_094614_create_admins_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_26_094614_create_admins_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_07_08_055015_create_tickets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_07_08_055015_create_tickets_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/InstallSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/InstallSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/material-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/material-dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Estate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Estate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/AhmedPanelTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/AhmedPanelTrait.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/ar/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/ar/crud.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/crud.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/en/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/en/crud.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/crud.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/AhmedPanel/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/layouts/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
@@ -194,7 +196,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests/Admin/Home" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -207,11 +209,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\localhost\DarApp\resources\views\Admin\AppContent\Estate" />
-      <recent name="D:\localhost\DarApp\app\Http\Requests\Admin\AppContent\Estate" />
-      <recent name="D:\localhost\DarApp\resources\views\Admin" />
-      <recent name="D:\localhost\DarApp\app\Http\Controllers\Admin\AppContent" />
+      <recent name="D:\localhost\DarApp\app\Http\Requests\Admin\Home" />
       <recent name="D:\localhost\DarApp\app\Http\Resources\Api\Home" />
+      <recent name="D:\localhost\DarApp\app\Http\Requests\Api\Home" />
+      <recent name="D:\localhost\DarApp\resources\views\AhmedPanel\base\fields" />
+      <recent name="D:\localhost\DarApp\app\Http\Controllers\Admin\AppData" />
     </key>
   </component>
   <component name="RunManager">
@@ -262,7 +264,12 @@
       <workItem from="1609267492144" duration="1145000" />
       <workItem from="1609311296223" duration="12000" />
       <workItem from="1610184180398" duration="28035000" />
-      <workItem from="1610301399258" duration="5764000" />
+      <workItem from="1610301399258" duration="6234000" />
+      <workItem from="1610345789582" duration="593000" />
+      <workItem from="1610383364275" duration="22000" />
+      <workItem from="1610957126018" duration="717000" />
+      <workItem from="1610994927235" duration="35000" />
+      <workItem from="1611504838548" duration="9539000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1605265283537</created>

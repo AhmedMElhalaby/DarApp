@@ -8,6 +8,7 @@ use App\Http\Requests\Admin\AppContent\Estate\StoreRequest;
 use App\Http\Requests\Admin\AppContent\Estate\UpdateRequest;
 use App\Models\City;
 use App\Models\Estate;
+use App\Models\EstateType;
 use App\Models\User;
 use App\Traits\AhmedPanelTrait;
 use Illuminate\Contracts\Foundation\Application;
@@ -55,12 +56,13 @@ class EstateController extends Controller
             ],
             'estate_type'=> [
                 'name'=>'estate_type',
-                'type'=>'select',
-                'data'=>[
-                    Constant::ESTATE_TYPE['House'] =>__('crud.Estate.EstateTypes.'.Constant::ESTATE_TYPE['House'],[],session('my_locale')),
-                    Constant::ESTATE_TYPE['Apartment'] =>__('crud.Estate.EstateTypes.'.Constant::ESTATE_TYPE['Apartment'],[],session('my_locale')),
-                    Constant::ESTATE_TYPE['Land'] =>__('crud.Estate.EstateTypes.'.Constant::ESTATE_TYPE['Land'],[],session('my_locale')),
-                    Constant::ESTATE_TYPE['Shop'] =>__('crud.Estate.EstateTypes.'.Constant::ESTATE_TYPE['Shop'],[],session('my_locale')),
+                'type'=>'custom_relation',
+                'relation'=>[
+                    'data'=> EstateType::all(),
+                    'custom'=>function($Object){
+                        return (session('my_locale') == 'en')?$Object->getName():$Object->getNameAr();
+                    },
+                    'entity'=>'estate_type_rel'
                 ],
                 'is_searchable'=>true,
                 'order'=>true

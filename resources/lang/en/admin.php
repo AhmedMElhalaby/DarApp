@@ -26,6 +26,7 @@ return [
         'faqs'=>'FAQ',
         'cities'=>'Cities',
         'areas'=>'Areas',
+        'estate_types'=>'Estate Types',
         'currencies'=>'Currencies',
         'estate_areas'=>'Estate Areas',
         'bank_accounts'=>'Bank Accounts',

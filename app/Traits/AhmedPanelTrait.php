@@ -357,6 +357,9 @@ trait AhmedPanelTrait
             case 'select':
                 return view('AhmedPanel.base.fields.select',compact('Field','value','lang'));
                 break;
+            case 'checkbox':
+                return view('AhmedPanel.base.fields.checkbox',compact('Field','value','lang'));
+                break;
             case 'relation':
                 return view('AhmedPanel.base.fields.relation',compact('Field','value','lang'));
                 break;

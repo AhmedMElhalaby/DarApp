@@ -80,6 +80,9 @@ class Estate extends Model
     public function currency(){
         return $this->belongsTo(Currency::class);
     }
+    public function estate_type_rel(){
+        return $this->belongsTo(EstateType::class,'estate_type','id');
+    }
     public function estate_media(){
         return $this->hasMany(Media::class,'ref_id','id')->where('media_type',Constant::MEDIA_TYPES['Estate Media']);
     }

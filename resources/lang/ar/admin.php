@@ -26,6 +26,7 @@ return [
         'faqs'=>'الأسئلة الشائعة',
         'cities'=>'المدن',
         'areas'=>'المناطق',
+        'estate_types'=>'أنواع العقارات',
         'currencies'=>'العملات',
         'estate_areas'=>'مساحات العقارات',
         'bank_accounts'=>'الحسابات البنكية',

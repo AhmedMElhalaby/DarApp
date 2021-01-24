@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Helpers\Constant;
 use App\Helpers\Functions;
 use App\Http\Requests\Admin\Home\DeleteMediaRequest;
+use App\Http\Requests\Admin\Home\EstateTypeRequest;
 use App\Models\User;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
@@ -19,6 +20,10 @@ class HomeController extends Controller
      */
     public function index(){
         return view('AhmedPanel.home');
+    }
+    public function estate_type_response(EstateTypeRequest $request): \Illuminate\Http\JsonResponse
+    {
+        return $request->persist();
     }
     public function lang(){
         if(session('my_locale','en') =='en'){

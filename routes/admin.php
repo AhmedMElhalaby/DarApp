@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('app/lang', 'HomeController@lang');
+Route::get('estate_type', 'HomeController@estate_type_response');
 
 
 /*
@@ -186,6 +187,18 @@ Route::group([
             Route::put('/{estate_area}','EstateAreaController@update');
             Route::delete('/{estate_area}','EstateAreaController@destroy');
             Route::get('/option/export','EstateAreaController@export');
+        });
+        Route::group([
+            'prefix'=>'estate_types'
+        ],function () {
+            Route::get('/','EstateTypeController@index');
+            Route::get('/create','EstateTypeController@create');
+            Route::post('/','EstateTypeController@store');
+            Route::get('/{estate_type}','EstateTypeController@show');
+            Route::get('/{estate_type}/edit','EstateTypeController@edit');
+            Route::put('/{estate_type}','EstateTypeController@update');
+            Route::delete('/{estate_type}','EstateTypeController@destroy');
+            Route::get('/option/export','EstateTypeController@export');
         });
     });
     /*

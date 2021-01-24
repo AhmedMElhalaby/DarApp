@@ -31,7 +31,7 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'estate_type'=>'required|in:'.Constant::ESTATE_TYPE_RULES,
+            'estate_type'=>'required|exists:estate_types,id',
             'estate_offer_type'=>'required|in:'.Constant::ESTATE_OFFER_TYPE_RULES,
             'user_id'=>'required|exists:users,id',
             'city_id'=>'required|exists:cities,id',
@@ -40,14 +40,6 @@ class StoreRequest extends FormRequest
             'estate_area'=>'required|numeric',
             'price'=>'required|numeric',
             'currency_id'=>'required|exists:currencies,id',
-            'land_area'=>'required_if:estate_type,'.Constant::ESTATE_TYPE['House'],
-            'building_area'=>'required_if:estate_type,'.Constant::ESTATE_TYPE['House'],
-            'building_age'=>'required_if:estate_type,'.Constant::ESTATE_TYPE['House'].'|required_if:estate_type,'.Constant::ESTATE_TYPE['Apartment'],
-            'apartment_area'=>'required_if:estate_type,'.Constant::ESTATE_TYPE['Apartment'],
-            'apartment_floor'=>'required_if:estate_type,'.Constant::ESTATE_TYPE['Apartment'],
-            'land_interface'=>'required_if:estate_type,'.Constant::ESTATE_TYPE['Land'],
-            'shop_length_area'=>'required_if:estate_type,'.Constant::ESTATE_TYPE['Shop'],
-            'shop_width_area'=>'required_if:estate_type,'.Constant::ESTATE_TYPE['Shop'],
             'room_no'=>'sometimes',
             'bathroom_no'=>'sometimes',
             'halls_no'=>'sometimes',

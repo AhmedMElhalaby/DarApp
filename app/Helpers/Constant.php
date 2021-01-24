@@ -45,13 +45,7 @@ class Constant
     ];
     const SOCIAL_PROVIDER_RULES = '1,2';
 
-    const ESTATE_TYPE = [
-        'House'=>1,
-        'Apartment'=>2,
-        'Land'=>3,
-        'Shop'=>4,
-    ];
-    const ESTATE_TYPE_RULES = '1,2,3,4';
+
 
     const ESTATE_OFFER_TYPE = [
         'Selling'=>1,

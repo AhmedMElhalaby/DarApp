@@ -5,27 +5,16 @@ namespace App\Http\Requests\Api\Home;
 use App\Helpers\Constant;
 use App\Http\Requests\Api\ApiRequest;
 use App\Http\Resources\Api\Home\AreaResource;
-use App\Http\Resources\Api\Home\BankAccountResource;
-use App\Http\Resources\Api\Home\CategoryResource;
 use App\Http\Resources\Api\Home\CityResource;
-use App\Http\Resources\Api\Home\CountryResource;
 use App\Http\Resources\Api\Home\CurrencyResource;
-use App\Http\Resources\Api\Home\DocumentTypeResource;
-use App\Http\Resources\Api\Home\EstateAreaResource;
+use App\Http\Resources\Api\Home\EstateTypeResource;
 use App\Http\Resources\Api\Home\LawyerResource;
-use App\Http\Resources\Api\Home\SubscriptionResource;
 use App\Models\Admin;
 use App\Models\Area;
-use App\Models\BankAccount;
-use App\Models\Category;
 use App\Models\City;
-use App\Models\Country;
 use App\Models\Currency;
-use App\Models\DocumentType;
-use App\Models\EstateArea;
+use App\Models\EstateType;
 use App\Models\Setting;
-use App\Models\Subscription;
-use App\Models\User;
 use App\Traits\ResponseTrait;
 
 class InstallRequest extends ApiRequest
@@ -73,6 +62,7 @@ class InstallRequest extends ApiRequest
         ];
 //        $data['BankAccounts'] = BankAccountResource::collection(BankAccount::where('is_active',true)->get());
         $data['Cities'] = CityResource::collection(City::where('is_active',true)->get());
+        $data['EstateTypes'] = EstateTypeResource::collection(EstateType::all());
         $data['Lawyers'] = LawyerResource::collection(Admin::where('type',Constant::ADMIN_TYPES['Lawyer'])->get());
         $data['Areas'] = AreaResource::collection(Area::where('is_active',true)->get());
         $data['Currencies'] = CurrencyResource::collection(Currency::where('is_active',true)->get());
@@ -83,7 +73,6 @@ class InstallRequest extends ApiRequest
             'VerificationType'=>Constant::VERIFICATION_TYPE,
             'ForgetPasswordType'=>Constant::FORGET_PASSWORD_TYPE,
             'SocialProvider'=>Constant::SOCIAL_PROVIDER,
-            'EstateType'=>Constant::ESTATE_TYPE,
             'EstateOfferType'=>Constant::ESTATE_OFFER_TYPE,
             'FinishingType'=>Constant::FINISHING_TYPE,
         ];

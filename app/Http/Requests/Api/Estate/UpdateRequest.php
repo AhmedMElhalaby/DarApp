@@ -33,7 +33,7 @@ class UpdateRequest extends ApiRequest
     {
         return [
             'estate_id'=>'sometimes|exists:estates,id',
-            'estate_type'=>'sometimes|in:'.Constant::ESTATE_TYPE_RULES,
+            'estate_type'=>'sometimes|exists:estate_types',
             'estate_offer_type'=>'sometimes|in:'.Constant::ESTATE_OFFER_TYPE_RULES,
             'city_id'=>'sometimes|exists:cities,id',
             'area_id'=>'sometimes|exists:areas,id',

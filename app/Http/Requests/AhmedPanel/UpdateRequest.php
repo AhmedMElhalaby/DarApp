@@ -57,6 +57,9 @@ class UpdateRequest extends FormRequest
             elseif ($field['type'] == 'multi_checkbox'){
                 $MultiCheckboxField[] = $field;
             }
+            elseif ($field['type'] == 'checkbox'){
+                $Object->{$field['name']} = $this->filled($field['name']);
+            }
             elseif ($field['type'] == 'images'){
                 $ImagesField[] = $field;
             }else {
