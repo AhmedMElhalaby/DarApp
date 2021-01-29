@@ -36,7 +36,7 @@ class StoreRequest extends ApiRequest
             'estate_offer_type'=>'required|in:'.Constant::ESTATE_OFFER_TYPE_RULES,
             'city_id'=>'required|exists:cities,id',
             'area_id'=>'required|exists:areas,id',
-            'street'=>'required|string|max:255',
+            'street'=>'nullable|max:255',
             'estate_area'=>'required|numeric',
             'price'=>'required|numeric',
             'currency_id'=>'required|exists:currencies,id',
@@ -82,10 +82,10 @@ class StoreRequest extends ApiRequest
             'contact_mobile2'=>'sometimes|string',
             'lat'=>'required|string',
             'lng'=>'required|string',
-            'estate_media'=>'required|array',
-            'estate_media.*'=>'required|mimes:jpeg,jpg,png',
-            'neighborhood_media'=>'required|array',
-            'neighborhood_media.*'=>'required|mimes:jpeg,jpg,png',
+            'estate_media'=>'array',
+            'estate_media.*'=>'mimes:jpeg,jpg,png',
+            'neighborhood_media'=>'array',
+            'neighborhood_media.*'=>'mimes:jpeg,jpg,png',
 
 
         ];
@@ -99,7 +99,7 @@ class StoreRequest extends ApiRequest
         $Object->setEstateOfferType($this->estate_offer_type);
         $Object->setCityId($this->city_id);
         $Object->setAreaId($this->area_id);
-        $Object->setStreet($this->street);
+        $Object->setStreet(@$this->street);
         $Object->setEstateArea($this->estate_area);
         $Object->setPrice($this->price);
         $Object->setCurrencyId($this->currency_id);
