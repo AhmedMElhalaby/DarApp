@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7f6c06b2-2883-4aa3-bed7-dac8c325c520" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/AppContent/Estate/StoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/AppContent/Estate/StoreRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,6 +248,8 @@
       <workItem from="1610994927235" duration="35000" />
       <workItem from="1611504838548" duration="11274000" />
       <workItem from="1611519781434" duration="19000" />
+      <workItem from="1611946202375" duration="815000" />
+      <workItem from="1611979855542" duration="787000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1605265283537</created>

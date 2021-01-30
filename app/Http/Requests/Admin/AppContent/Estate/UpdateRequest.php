@@ -36,7 +36,7 @@ class UpdateRequest extends FormRequest
             'user_id'=>'required|exists:users,id',
             'city_id'=>'required|exists:cities,id',
             'area_id'=>'required|exists:areas,id',
-            'street'=>'required|string|max:255',
+            'street'=>'nullable|string|max:255',
             'estate_area'=>'required|numeric',
             'price'=>'required|numeric',
             'currency_id'=>'required|exists:currencies,id',
@@ -88,7 +88,7 @@ class UpdateRequest extends FormRequest
         $Object->setEstateOfferType($this->estate_offer_type);
         $Object->setCityId($this->city_id);
         $Object->setAreaId($this->area_id);
-        $Object->setStreet($this->street);
+        $Object->setStreet(@$this->street);
         $Object->setEstateArea($this->estate_area);
         $Object->setPrice($this->price);
         $Object->setCurrencyId($this->currency_id);

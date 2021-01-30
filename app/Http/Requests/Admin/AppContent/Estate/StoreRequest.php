@@ -36,7 +36,7 @@ class StoreRequest extends FormRequest
             'user_id'=>'required|exists:users,id',
             'city_id'=>'required|exists:cities,id',
             'area_id'=>'required|exists:areas,id',
-            'street'=>'required|string|max:255',
+            'street'=>'nullable|max:255',
             'estate_area'=>'required|numeric',
             'price'=>'required|numeric',
             'currency_id'=>'required|exists:currencies,id',
@@ -74,10 +74,10 @@ class StoreRequest extends FormRequest
             'contact_mobile2'=>'sometimes',
             'lat'=>'required|string',
             'lng'=>'required|string',
-            'estate_media'=>'required|array',
-            'estate_media.*'=>'required|mimes:jpeg,jpg,png',
-            'neighborhood_media'=>'required|array',
-            'neighborhood_media.*'=>'required|mimes:jpeg,jpg,png',
+            'estate_media'=>'array',
+            'estate_media.*'=>'mimes:jpeg,jpg,png',
+            'neighborhood_media'=>'array',
+            'neighborhood_media.*'=>'mimes:jpeg,jpg,png',
         ];
     }
 

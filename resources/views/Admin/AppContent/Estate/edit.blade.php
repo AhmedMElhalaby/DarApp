@@ -123,7 +123,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group label-floating">
-                                        <label for="street" class="control-label">{{__('crud.'.$lang.'.street')}} *</label>
+                                        <label for="street" class="control-label">{{__('crud.'.$lang.'.street')}}</label>
                                         <input type="text" name="street" style="margin: 0;padding: 0" id="street" class="form-control" value="{{$Object->street}}">
                                     </div>
                                     @if ($errors->has('street'))
@@ -580,7 +580,7 @@
                         <div class="tab-pane" id="estate_media">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <label for="estate_media" class="control-label">{{__('crud.'.$lang.'.estate_media')}} *</label>
+                                    <label for="estate_media" class="control-label">{{__('crud.'.$lang.'.estate_media')}}</label>
                                     <input type="file" name="estate_media[]" id="estate_media" multiple class="">
                                     @if ($errors->has('estate_media'))
                                         <span class="invalid-feedback" role="alert">
@@ -591,7 +591,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <label for="neighborhood_media" class="control-label">{{__('crud.'.$lang.'.neighborhood_media')}} *</label>
+                                    <label for="neighborhood_media" class="control-label">{{__('crud.'.$lang.'.neighborhood_media')}}</label>
                                     <input type="file" name="neighborhood_media[]" id="neighborhood_media" multiple class="">
                                     @if ($errors->has('neighborhood_media'))
                                         <span class="invalid-feedback" role="alert">
