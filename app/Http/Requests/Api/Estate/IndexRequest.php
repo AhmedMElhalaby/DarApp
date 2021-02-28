@@ -182,7 +182,7 @@ class IndexRequest extends ApiRequest
             $Objects = $Objects->where('price','<',$this->price_to);
         }
         if($this->filled('orderBy') && $this->filled('orderType')){
-            $Objects = $Objects->orderBy($this->orderBy,$this->orderType);
+            $Objects = $Objects->orderBy($this->orderBy,''.$this->orderType);
         }
         if($saved){
             $SavedSearch->save();
