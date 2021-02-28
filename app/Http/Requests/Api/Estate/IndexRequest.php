@@ -35,6 +35,7 @@ class IndexRequest extends ApiRequest
             'room_no'=>'sometimes',
             'city_id'=>'sometimes',
             'area_id'=>'sometimes',
+            'orderType'=>'in:asc,desc',
         ];
     }
 
