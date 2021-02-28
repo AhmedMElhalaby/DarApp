@@ -62,7 +62,7 @@
         </div>
     </div>
     <div class="pagination-div">
-        {{ $Objects->appends(\App\Traits\AhmedPanelTrait::SearchAppends($Columns))->links() }}
+        {{ $Objects->appends(\App\Traits\AhmedPanelTrait::SearchAppends($Columns))->links('vendor.pagination.default') }}
     </div>
 </div>
 @endsection

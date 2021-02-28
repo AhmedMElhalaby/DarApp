@@ -5,9 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f6c06b2-2883-4aa3-bed7-dac8c325c520" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Home/AreaRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/bootstrap-4.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/default.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/semantic-ui.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/simple-bootstrap-4.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/simple-default.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/simple-tailwind.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/tailwind.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/AppContent/Estate/StoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/AppContent/Estate/StoreRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppContent/EstateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppContent/EstateController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/crud.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/crud.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/crud.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/crud.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AhmedPanel/crud/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/crud/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +187,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests/Admin/Home" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests/Api/Home" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -186,11 +200,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\localhost\DarApp\app\Http\Requests\Api\Home" />
+      <recent name="D:\localhost\DarApp\resources\views" />
       <recent name="D:\localhost\DarApp\app\Http\Requests\Admin\Home" />
       <recent name="D:\localhost\DarApp\app\Http\Resources\Api\Home" />
-      <recent name="D:\localhost\DarApp\app\Http\Requests\Api\Home" />
       <recent name="D:\localhost\DarApp\resources\views\AhmedPanel\base\fields" />
-      <recent name="D:\localhost\DarApp\app\Http\Controllers\Admin\AppData" />
     </key>
   </component>
   <component name="RunManager">
@@ -249,7 +263,11 @@
       <workItem from="1611504838548" duration="11274000" />
       <workItem from="1611519781434" duration="19000" />
       <workItem from="1611946202375" duration="815000" />
-      <workItem from="1611979855542" duration="787000" />
+      <workItem from="1611979855542" duration="922000" />
+      <workItem from="1611981651496" duration="9000" />
+      <workItem from="1612336185476" duration="252000" />
+      <workItem from="1614479692021" duration="1112000" />
+      <workItem from="1614481185188" duration="4427000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1605265283537</created>

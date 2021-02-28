@@ -61,6 +61,7 @@ Route::group([
 Route::group([
     'prefix' => 'home',
 ], function() {
+    Route::get('areas','HomeController@areas');
     Route::get('faqs','HomeController@faqs');
     Route::get('install','HomeController@install');
 });

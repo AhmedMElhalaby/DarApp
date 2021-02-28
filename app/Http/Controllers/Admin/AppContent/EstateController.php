@@ -11,6 +11,7 @@ use App\Models\Estate;
 use App\Models\EstateType;
 use App\Models\User;
 use App\Traits\AhmedPanelTrait;
+use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
@@ -75,6 +76,15 @@ class EstateController extends Controller
                     Constant::ESTATE_OFFER_TYPE['Renting'] =>__('crud.Estate.EstateOfferTypes.'.Constant::ESTATE_OFFER_TYPE['Renting'],[],session('my_locale')),
                     Constant::ESTATE_OFFER_TYPE['Switching'] =>__('crud.Estate.EstateOfferTypes.'.Constant::ESTATE_OFFER_TYPE['Switching'],[],session('my_locale')),
                 ],
+                'is_searchable'=>true,
+                'order'=>true
+            ],
+            'created_at'=> [
+                'name'=>'created_at',
+                'type'=>'text-custom',
+                'custom'=>function($Object){
+                    return Carbon::parse($Object->created_at)->format('Y-m-d H:i');
+                },
                 'is_searchable'=>true,
                 'order'=>true
             ],

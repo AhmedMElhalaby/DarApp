@@ -224,6 +224,7 @@ return [
         'contact_mobile2' => 'رقم جوال (2) ',
         'lat' => 'خط العرض',
         'lng' => 'خط الطول',
+        'created_at' => 'تاريخ الإنشاء',
         'EstateOfferTypes' => [
             ''.Constant::ESTATE_OFFER_TYPE['Selling']=>'بيع',
             ''.Constant::ESTATE_OFFER_TYPE['Renting']=>'إيجار',

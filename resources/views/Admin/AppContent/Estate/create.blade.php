@@ -109,9 +109,6 @@
                                     <div class="form-group label-floating">
                                         <label for="area_id" class="control-label">{{__('crud.'.$lang.'.area_id')}} *</label>
                                         <select name="area_id" required style="margin: 0;padding: 0" id="area_id" class="form-control">
-                                            @foreach(\App\Models\Area::where('is_active',true)->get() as $area)
-                                                <option value="{{$area->getId()}}" @if(old('area_id') == $area->getId()) selected @endif>{{(app()->getLocale() =='ar')?$area->getNameAr():$area->getName()}}</option>
-                                            @endforeach
                                         </select>
                                     </div>
                                     @if ($errors->has('area_id'))
@@ -334,7 +331,7 @@
                             <div class="row">
                                 <div class="col-md-12 estate_details" id="description_div">
                                     <div class="form-group label-floating">
-                                        <label for="description" class="control-label">{{__('crud.'.$lang.'.description')}} *</label>
+                                        <label for="description" class="control-label">{{__('crud.'.$lang.'.description')}} </label>
                                         <textarea type="text" name="description" style="margin: 0;padding: 0" id="description" class="form-control">{{old('description')}}</textarea>
                                     </div>
                                     @if ($errors->has('description'))
@@ -393,7 +390,7 @@
                             <div class="row">
                                 <div class="col-md-3 estate_details" id="elementary_schools_no_div">
                                     <div class="form-group label-floating">
-                                        <label for="elementary_schools_no" class="control-label">{{__('crud.'.$lang.'.elementary_schools_no')}} *</label>
+                                        <label for="elementary_schools_no" class="control-label">{{__('crud.'.$lang.'.elementary_schools_no')}} </label>
                                         <input type="text" name="elementary_schools_no" style="margin: 0;padding: 0" id="elementary_schools_no" class="form-control" value="{{old('elementary_schools_no')}}">
                                     </div>
                                     @if ($errors->has('elementary_schools_no'))
@@ -404,7 +401,7 @@
                                 </div>
                                 <div class="col-md-3 estate_details" id="preparatory_schools_no_div">
                                     <div class="form-group label-floating">
-                                        <label for="preparatory_schools_no" class="control-label">{{__('crud.'.$lang.'.preparatory_schools_no')}} *</label>
+                                        <label for="preparatory_schools_no" class="control-label">{{__('crud.'.$lang.'.preparatory_schools_no')}} </label>
                                         <input type="text" name="preparatory_schools_no" style="margin: 0;padding: 0" id="preparatory_schools_no" class="form-control" value="{{old('preparatory_schools_no')}}">
                                     </div>
                                     @if ($errors->has('preparatory_schools_no'))
@@ -415,7 +412,7 @@
                                 </div>
                                 <div class="col-md-3 estate_details" id="secondary_schools_no_div">
                                     <div class="form-group label-floating">
-                                        <label for="secondary_schools_no" class="control-label">{{__('crud.'.$lang.'.secondary_schools_no')}} *</label>
+                                        <label for="secondary_schools_no" class="control-label">{{__('crud.'.$lang.'.secondary_schools_no')}} </label>
                                         <input type="text" name="secondary_schools_no" style="margin: 0;padding: 0" id="secondary_schools_no" class="form-control" value="{{old('secondary_schools_no')}}">
                                     </div>
                                     @if ($errors->has('secondary_schools_no'))
@@ -426,7 +423,7 @@
                                 </div>
                                 <div class="col-md-3 estate_details" id="kindergarten_no_div">
                                     <div class="form-group label-floating">
-                                        <label for="kindergarten_no" class="control-label">{{__('crud.'.$lang.'.kindergarten_no')}} *</label>
+                                        <label for="kindergarten_no" class="control-label">{{__('crud.'.$lang.'.kindergarten_no')}} </label>
                                         <input type="text" name="kindergarten_no" style="margin: 0;padding: 0" id="kindergarten_no" class="form-control" value="{{old('kindergarten_no')}}">
                                     </div>
                                     @if ($errors->has('kindergarten_no'))
@@ -643,7 +640,7 @@
                             <div class="row">
                                 <div class="col-md-12" id="contact_name_div">
                                     <div class="form-group label-floating">
-                                        <label for="contact_name" class="control-label">{{__('crud.'.$lang.'.contact_name')}} *</label>
+                                        <label for="contact_name" class="control-label">{{__('crud.'.$lang.'.contact_name')}} </label>
                                         <input type="text" name="contact_name" style="margin: 0;padding: 0" id="contact_name" class="form-control" value="{{old('contact_name')}}">
                                     </div>
                                     @if ($errors->has('contact_name'))
@@ -656,7 +653,7 @@
                             <div class="row">
                                 <div class="col-md-4" id="contact_identity_div">
                                     <div class="form-group label-floating">
-                                        <label for="contact_identity" class="control-label">{{__('crud.'.$lang.'.contact_identity')}} *</label>
+                                        <label for="contact_identity" class="control-label">{{__('crud.'.$lang.'.contact_identity')}} </label>
                                         <input type="text" name="contact_identity" style="margin: 0;padding: 0" id="contact_identity" class="form-control" value="{{old('contact_identity')}}">
                                     </div>
                                     @if ($errors->has('contact_identity'))
@@ -678,7 +675,7 @@
                                 </div>
                                 <div class="col-md-4" id="contact_mobile2_div">
                                     <div class="form-group label-floating">
-                                        <label for="contact_mobile2" class="control-label">{{__('crud.'.$lang.'.contact_mobile2')}} *</label>
+                                        <label for="contact_mobile2" class="control-label">{{__('crud.'.$lang.'.contact_mobile2')}} </label>
                                         <input type="text" name="contact_mobile2" style="margin: 0;padding: 0" id="contact_mobile2" class="form-control" value="{{old('contact_mobile2')}}">
                                     </div>
                                     @if ($errors->has('contact_mobile2'))
@@ -762,5 +759,20 @@
             });
         });
         $('#estate_type').trigger('change');
+        $('#city_id').on('change',function (){
+            let city_id = $(this).val();
+            $.get( "{{url('api/home/areas')}}", { city_id }, function( response ) {
+                if (response.status.status === 'success'){
+                    console.log(response.Areas);
+                    let html = '';
+                    response.Areas.forEach(area=>{
+                        html +='<option value="'+area.id+'">'+area.name+'</option>'
+                    });
+                    $('#area_id').html(html);
+                }else{
+                    console.log(response.status.message);
+                }
+            });
+        });
     </script>
 @endsection

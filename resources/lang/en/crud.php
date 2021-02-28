@@ -224,6 +224,7 @@ return [
         'contact_mobile2' => 'Mobile (2) ',
         'lat' => 'Lat',
         'lng' => 'Lng',
+        'created_at' => 'Created At',
         'FinishingTypes' => [
             ''.Constant::FINISHING_TYPE['No Finishing']=>'No Finishing',
             ''.Constant::FINISHING_TYPE['Full Finishing']=>'Full Finishing',

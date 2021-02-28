@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\Home\FaqRequest;
 use App\Http\Requests\Api\Home\InstallRequest;
+use App\Http\Requests\Api\Home\AreaRequest;
 use App\Traits\ResponseTrait;
 use Illuminate\Http\JsonResponse;
 
@@ -27,5 +28,11 @@ class HomeController extends Controller
     {
         return $request->persist();
     }
-
+    /**
+     * @param AreaRequest $request
+     * @return JsonResponse
+     */
+    public function areas(AreaRequest $request){
+        return $request->persist();
+    }
 }
