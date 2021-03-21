@@ -1,4 +1,12 @@
 @extends('AhmedPanel.crud.main')
+@section('style')
+    <style>
+        #map {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+@endsection
 @section('content')
     <div class="row">
         <div class="col-md-12">
@@ -576,6 +584,14 @@
                         </div>
                         <div class="tab-pane" id="estate_media">
                             <div class="row">
+                                @foreach($Object->estate_media as $media)
+                                    <span style="position: relative;width: 120px;height: 120px;display: inline-block" id="media_{{$media->getId()}}">
+                                        <a href="javascript:;" onclick="deleteMedia({{$media->id}})" class="text-danger" style="position: absolute;top: 5px;right: 10px;"><i class="text-danger fa fa-window-close"></i></a>
+                                        <img style="width: 120px;height: 120px;display: inline-block" src="{{$media->getFile()}}" alt="" class="thumbnail"/>
+                                    </span>
+                                @endforeach
+                            </div>
+                            <div class="row">
                                 <div class="col-md-12">
                                     <label for="estate_media" class="control-label">{{__('crud.'.$lang.'.estate_media')}}</label>
                                     <input type="file" name="estate_media[]" id="estate_media" multiple class="">
@@ -585,6 +601,14 @@
                                         </span>
                                     @endif
                                 </div>
+                            </div>
+                            <div class="row">
+                                @foreach($Object->neighborhood_media as $media)
+                                    <span style="position: relative;width: 120px;height: 120px;display: inline-block" id="media_{{$media->getId()}}">
+                                        <a href="javascript:;" onclick="deleteMedia({{$media->id}})" class="text-danger" style="position: absolute;top: 5px;right: 10px;"><i class="text-danger fa fa-window-close"></i></a>
+                                        <img style="width: 120px;height: 120px;display: inline-block" src="{{$media->getFile()}}" alt="" class="thumbnail"/>
+                                    </span>
+                                @endforeach
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
@@ -710,6 +734,9 @@
                                     @endif
                                 </div>
                             </div>
+                            <div class="row">
+                                <div id="map"></div>
+                            </div>
                             <div class="row submit-btn">
                                 <button type="submit" class="btn btn-primary" style="margin-left:15px;margin-right:15px;">{{__('admin.save')}}</button>
                                 <button type="button" class="btn btn-primary" onclick="document.getElementById('estate_media_tab').click()" style="margin-left:15px;margin-right:15px;">{{__('admin.previous')}}</button>
@@ -782,5 +809,88 @@
             });
         });
         $('#city_id').trigger('change');
+        function deleteMedia(id){
+            $.post( "{{url('admin/app_content/estates/media/destroy')}}", { media_id:{{$Object->getId()}} }, function( response ) {
+                if (response.status.status === 'success'){
+                    $('#media_'+id).remove();
+                }else{
+                    console.log(response.status.message);
+                }
+            });
+        }
     </script>
+    <script>
+        let markers = [];
+        let map,infoWindow;
+        let labelIndex = 0;
+
+        function initMap() {
+            let myOptions = {
+                zoom: 17,
+                center: new google.maps.LatLng(12.97, 77.59),
+                mapTypeId: google.maps.MapTypeId.HYBRID,
+                mapTypeControlOptions: {
+                    mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.HYBRID,google.maps.MapTypeId.SATELLITE]
+                },
+                disableDoubleClickZoom: true,
+                // scrollwheel: false,
+                // draggableCursor: "crosshair"
+            };
+            map = new google.maps.Map(document.getElementById("map"), myOptions);
+            infoWindow = new google.maps.InfoWindow;
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    let pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    infoWindow.open(map);
+                    map.setCenter(pos);
+                }, function() {
+                    handleLocationError(true, infoWindow, map.getCenter());
+                });
+            } else {
+                handleLocationError(false, infoWindow, map.getCenter());
+            }
+            google.maps.event.addListener(map, 'click', function(event) {
+                clearMarkers();
+                addMarker(event.latLng, map);
+                let locationLin=  event.latLng.toString().replace('(','').replace(')','').split(',');
+                $('#lat').val(parseFloat(locationLin[0]));
+                $('#lng').val(parseFloat(locationLin[1]));
+            });
+            clearMarkers(map);
+            let pos = {
+                lat: {{$Object->getLat()}},
+                lng: {{$Object->getLng()}}
+            };
+            addMarker(pos,map);
+        }
+
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(browserHasGeolocation ?
+                'Error: The Geolocation service failed.' :
+                'Error: Your browser doesn\'t support geolocation.');
+            infoWindow.open(map);
+        }
+        function setMapOnAll(map) {
+            for (var i = 0; i < markers.length; i++) {
+                markers[i].setMap(map);
+            }
+        }
+        function clearMarkers() {
+            setMapOnAll(null);
+            markers = [];
+            labelIndex= 1;
+        }
+        function addMarker(location, map) {
+            let marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+            markers.push(marker);
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX8AHzUs-M8DHe5y9QSSsHfBTeQLfh_yY&callback=initMap" async defer></script>
 @endsection

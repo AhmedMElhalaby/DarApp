@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f6c06b2-2883-4aa3-bed7-dac8c325c520" name="Default Changelist" comment="update" />
+    <list default="true" id="7f6c06b2-2883-4aa3-bed7-dac8c325c520" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/AppContent/Estate/MediaDestroyRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppContent/EstateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppContent/EstateController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/AhmedPanel/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -169,7 +178,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests/Api/Home" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests/Admin/AppContent/Estate" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -182,11 +191,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\localhost\DarApp\app\Http\Requests\Admin\AppContent\Estate" />
+      <recent name="D:\localhost\DarApp\resources\views\Admin\AppContent\Estate" />
       <recent name="D:\localhost\DarApp\app\Http\Requests\Api\Home" />
       <recent name="D:\localhost\DarApp\resources\views" />
       <recent name="D:\localhost\DarApp\app\Http\Requests\Admin\Home" />
-      <recent name="D:\localhost\DarApp\app\Http\Resources\Api\Home" />
-      <recent name="D:\localhost\DarApp\resources\views\AhmedPanel\base\fields" />
     </key>
   </component>
   <component name="RunManager">
@@ -249,7 +258,11 @@
       <workItem from="1611981651496" duration="9000" />
       <workItem from="1612336185476" duration="252000" />
       <workItem from="1614479692021" duration="1112000" />
-      <workItem from="1614481185188" duration="4823000" />
+      <workItem from="1614481185188" duration="5666000" />
+      <workItem from="1616262724973" duration="368000" />
+      <workItem from="1616263099551" duration="10000" />
+      <workItem from="1616282892331" duration="3984000" />
+      <workItem from="1616287292721" duration="1672000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1605265283537</created>

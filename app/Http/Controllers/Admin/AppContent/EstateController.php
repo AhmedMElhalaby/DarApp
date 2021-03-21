@@ -6,6 +6,7 @@ use App\Helpers\Constant;
 use App\Http\Controllers\Admin\Controller;
 use App\Http\Requests\Admin\AppContent\Estate\StoreRequest;
 use App\Http\Requests\Admin\AppContent\Estate\UpdateRequest;
+use App\Http\Requests\Admin\AppContent\Estate\MediaDestroyRequest;
 use App\Models\City;
 use App\Models\Estate;
 use App\Models\EstateType;
@@ -13,6 +14,7 @@ use App\Models\User;
 use App\Traits\AhmedPanelTrait;
 use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
 
@@ -26,6 +28,7 @@ class EstateController extends Controller
         $this->setEntity(new Estate());
         $this->setTable('estates');
         $this->setLang('Estate');
+        $this->setViewShow('Admin.AppContent.Estate.show');
         $this->setViewCreate('Admin.AppContent.Estate.create');
         $this->setViewEdit('Admin.AppContent.Estate.edit');
         $this->setColumns([
@@ -96,6 +99,7 @@ class EstateController extends Controller
             ],
         ]);
         $this->SetLinks([
+            'show',
             'edit',
             'delete',
         ]);
@@ -122,5 +126,15 @@ class EstateController extends Controller
     public function update(UpdateRequest $request,$id)
     {
         return $request->preset($this,$id);
+    }
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param MediaDestroyRequest $request
+     * @return JsonResponse
+     */
+    public function media_destroy(MediaDestroyRequest $request)
+    {
+        return $request->preset($this);
     }
 }

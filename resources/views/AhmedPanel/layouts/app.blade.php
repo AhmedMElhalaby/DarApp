@@ -120,9 +120,6 @@
 <!--  Notification Plugin    -->
 <script src="{{asset('assets/js/bootstrap-notify.js')}}"></script>
 
-<!--  Google Maps Plugin    -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-
 <!-- Material Dashboard javascript methods -->
 <script src="{{asset('assets/js/material-dashboard.js')}}"></script>
 
