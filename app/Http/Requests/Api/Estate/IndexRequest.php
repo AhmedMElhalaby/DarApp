@@ -43,6 +43,7 @@ class IndexRequest extends ApiRequest
     {
         $Objects = new Estate();
         $saved = false;
+        $Objects = $Objects->where('is_confirmed',true);
         if($this->mine && auth('api')->check()){
             $Objects = $Objects->where('user_id',auth('api')->user()->getId());
         }else{
