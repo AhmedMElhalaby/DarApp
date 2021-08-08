@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Admin\AppContent;
 
 use App\Helpers\Constant;
 use App\Http\Controllers\Admin\Controller;
+use App\Http\Requests\Admin\AppContent\Estate\ConfirmRequest;
 use App\Http\Requests\Admin\AppContent\Estate\StoreRequest;
 use App\Http\Requests\Admin\AppContent\Estate\UpdateRequest;
 use App\Http\Requests\Admin\AppContent\Estate\MediaDestroyRequest;
+use App\Http\Requests\Admin\UserManagement\User\ActiveEmailMobileRequest;
 use App\Models\City;
 use App\Models\Estate;
 use App\Models\EstateType;
@@ -91,6 +93,12 @@ class EstateController extends Controller
                 'is_searchable'=>true,
                 'order'=>true
             ],
+            'is_confirmed'=> [
+                'name'=>'is_confirmed',
+                'type'=>'active',
+                'is_searchable'=>true,
+                'order'=>true
+            ],
             'is_active'=> [
                 'name'=>'is_active',
                 'type'=>'active',
@@ -102,6 +110,14 @@ class EstateController extends Controller
             'show',
             'edit',
             'delete',
+            'confirm'=>[
+                'route'=>'confirm',
+                'icon'=>'fa-check-square',
+                'lang'=>__('crud.Estate.Links.confirm',[],session('my_locale')),
+                'condition'=>function ($Object){
+                    return $Object->is_confirmed == false;
+                }
+            ],
         ]);
     }
 
@@ -136,5 +152,9 @@ class EstateController extends Controller
     public function media_destroy(MediaDestroyRequest $request)
     {
         return $request->preset($this);
+    }
+
+    public function confirm($id,ConfirmRequest $request){
+        return $request->preset($this,$id);
     }
 }

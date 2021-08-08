@@ -220,6 +220,7 @@ Route::group([
             Route::get('/{estate}','EstateController@show');
             Route::get('/{estate}/edit','EstateController@edit');
             Route::put('/{estate}','EstateController@update');
+            Route::get('/{estate}/confirm','EstateController@confirm');
             Route::post('/media/destroy','EstateController@media_destroy');
             Route::get('/option/export','EstateController@export');
         });

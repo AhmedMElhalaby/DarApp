@@ -60,13 +60,14 @@ use Illuminate\Database\Eloquent\Model;
  * @property mixed lng
  * @property mixed status
  * @property boolean is_active
+ * @property boolean is_confirmed
  * @method Estate find(int $id)
  * @method static updateOrCreate(array $array, array $array1)
  */
 class Estate extends Model
 {
     protected $table = 'estates';
-    protected $fillable = ['user_id','estate_type','estate_offer_type','city_id','area_id','currency_id','street','price','estate_area','land_area','building_area','building_age','room_no','bathroom_no','halls_no','floors_no','elementary_schools_no','preparatory_schools_no','secondary_schools_no','kindergarten_no','pharmacy_no','mosque_no','hospital_no','bakery_no','mall_no','finishing_type','description','has_garage','has_well','has_public_street_view','has_sea_view','apartment_area','apartment_floor','land_interface','is_residential','is_agricultural','is_commercial','is_industrial','is_taboo','is_payment_type_cash','is_payment_type_installment','is_payment_type_switching','has_attic','shop_length_area','shop_width_area','contact_name','contact_identity','contact_mobile1','contact_mobile2','status','lat','lng','is_active',];
+    protected $fillable = ['user_id','estate_type','estate_offer_type','city_id','area_id','currency_id','street','price','estate_area','land_area','building_area','building_age','room_no','bathroom_no','halls_no','floors_no','elementary_schools_no','preparatory_schools_no','secondary_schools_no','kindergarten_no','pharmacy_no','mosque_no','hospital_no','bakery_no','mall_no','finishing_type','description','has_garage','has_well','has_public_street_view','has_sea_view','apartment_area','apartment_floor','land_interface','is_residential','is_agricultural','is_commercial','is_industrial','is_taboo','is_payment_type_cash','is_payment_type_installment','is_payment_type_switching','has_attic','shop_length_area','shop_width_area','contact_name','contact_identity','contact_mobile1','contact_mobile2','status','lat','lng','is_active','is_confirmed'];
 
     public function user(){
         return $this->belongsTo(User::class);
@@ -951,6 +952,22 @@ class Estate extends Model
     public function setLng($lng): void
     {
         $this->lng = $lng;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isIsConfirmed(): bool
+    {
+        return $this->is_confirmed;
+    }
+
+    /**
+     * @param bool $is_confirmed
+     */
+    public function setIsConfirmed(bool $is_confirmed): void
+    {
+        $this->is_confirmed = $is_confirmed;
     }
 
 }

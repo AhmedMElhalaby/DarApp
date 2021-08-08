@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f6c06b2-2883-4aa3-bed7-dac8c325c520" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/AppContent/Estate/MediaDestroyRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/AppContent/Estate/ConfirmRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_07_17_124951_add_is_confirmed_to_estates_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DarApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DarApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/laravel-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-idea.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppContent/EstateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppContent/EstateController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/AppContent/Estate/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/AhmedPanel/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/AhmedPanel/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Estate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Estate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/crud.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/crud.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/crud.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/crud.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -262,7 +264,12 @@
       <workItem from="1616262724973" duration="368000" />
       <workItem from="1616263099551" duration="10000" />
       <workItem from="1616282892331" duration="3984000" />
-      <workItem from="1616287292721" duration="1672000" />
+      <workItem from="1616287292721" duration="1929000" />
+      <workItem from="1626525112841" duration="1431000" />
+      <workItem from="1626526560759" duration="740000" />
+      <workItem from="1626584727077" duration="305000" />
+      <workItem from="1626585206461" duration="159000" />
+      <workItem from="1628425781026" duration="1042000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1605265283537</created>
@@ -311,6 +318,18 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

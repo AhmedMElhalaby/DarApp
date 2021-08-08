@@ -225,6 +225,10 @@ return [
         'lat' => 'Lat',
         'lng' => 'Lng',
         'created_at' => 'Created At',
+        'is_confirmed' => 'Is Confirmed',
+        'Links'=>[
+            'confirm'=>'Confirm Estate'
+        ],
         'FinishingTypes' => [
             ''.Constant::FINISHING_TYPE['No Finishing']=>'No Finishing',
             ''.Constant::FINISHING_TYPE['Full Finishing']=>'Full Finishing',

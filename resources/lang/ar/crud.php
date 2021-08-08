@@ -225,6 +225,10 @@ return [
         'lat' => 'خط العرض',
         'lng' => 'خط الطول',
         'created_at' => 'تاريخ الإنشاء',
+        'is_confirmed' => 'حالة الموافقة',
+        'Links'=>[
+            'confirm'=>'الموافقة على العقار'
+        ],
         'EstateOfferTypes' => [
             ''.Constant::ESTATE_OFFER_TYPE['Selling']=>'بيع',
             ''.Constant::ESTATE_OFFER_TYPE['Renting']=>'إيجار',
