@@ -35,8 +35,9 @@ class CloseRequest extends FormRequest
             return $crud->wrongData();
         $Object->setStatus(Constant::TICKETS_STATUS['Closed']);
         $Object->save();
-        Functions::SendNotification($Object->user,'Ticket Respond',' Your ticket has been respond !','الرد على التذكرة','لقد تم الرد على تذكرتك ! ',$Object->getId(),Constant::NOTIFICATION_TYPE['Ticket'],true);
-
+        if ($Object->user){
+            Functions::SendNotification($Object->user,'Ticket Respond',' Your ticket has been respond !','الرد على التذكرة','لقد تم الرد على تذكرتك ! ',$Object->getId(),Constant::NOTIFICATION_TYPE['Ticket'],true);
+        }
         return redirect($crud->getRedirect())->with('status', __('admin.messages.saved_successfully'));
     }
 }
