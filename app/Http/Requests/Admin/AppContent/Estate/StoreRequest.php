@@ -3,6 +3,8 @@
 namespace App\Http\Requests\Admin\AppContent\Estate;
 
 use App\Helpers\Constant;
+use App\Models\Area;
+use App\Models\City;
 use App\Models\Estate;
 use App\Models\Media;
 use App\Models\ModelPermission;
@@ -83,6 +85,9 @@ class StoreRequest extends FormRequest
 
     public function preset($crud)
     {
+        $City = (new City())->find($this->city_id);
+        $Area = (new Area())->find($this->area_id);
+        $Code = substr($City->getName(),0,1).substr($Area->getName(),0,1).'-';
         $Object = new Estate();
         $Object->setUserId($this->user_id);
         $Object->setEstateType($this->estate_type);
@@ -215,6 +220,9 @@ class StoreRequest extends FormRequest
         }
         $Object->setLat($this->lat);
         $Object->setLng($this->lng);
+        $Object->save();
+        $Object->refresh();
+        $Object->setCode($Code.sprintf("%06d",$Object->getId()));
         $Object->save();
         $Object->refresh();
         if ($this->hasFile('estate_media')){

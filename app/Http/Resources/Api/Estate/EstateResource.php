@@ -30,6 +30,7 @@ class EstateResource extends JsonResource
         $Objects['city_id'] = $this->getCityId();
         $Objects['City'] = ($this->city)?new CityResource($this->city):null;
         $Objects['area_id'] = $this->getAreaId();
+        $Objects['code'] = $this->getCode();
         $Objects['Area'] = ($this->area)?new AreaResource($this->area):null;
         $Objects['currency_id'] = $this->getCurrencyId();
         $Objects['Currency'] = ($this->currency)?new CurrencyResource($this->currency):null;
