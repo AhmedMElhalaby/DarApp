@@ -177,6 +177,7 @@ return [
         'street' => 'الشارع',
         'estate_area' => 'مساحة العقار',
         'price' => 'السعر',
+        'code' => 'الكود',
         'estate_type' => 'نوع العقار',
         'estate_offer_type' => 'نوع العرض',
         'is_active' => 'الحالة',

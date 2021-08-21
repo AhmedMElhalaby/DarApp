@@ -47,6 +47,12 @@ class EstateController extends Controller
                 'is_searchable'=>true,
                 'order'=>true
             ],
+            'code'=> [
+                'name'=>'code',
+                'type'=>'text',
+                'is_searchable'=>true,
+                'order'=>true
+            ],
             'city_id'=> [
                 'name'=>'city_id',
                 'type'=>'custom_relation',

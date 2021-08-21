@@ -177,6 +177,7 @@ return [
         'street' => 'Street',
         'estate_area' => 'Estate Area',
         'price' => 'Price',
+        'code' => 'Code',
         'estate_type' => 'Estate Type',
         'estate_offer_type' => 'Estate Offer Type',
         'is_active' => 'Status',

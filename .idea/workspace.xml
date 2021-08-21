@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f6c06b2-2883-4aa3-bed7-dac8c325c520" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_08_21_161711_add_code_to_estates_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/AppContent/Estate/StoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Admin/AppContent/Estate/StoreRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/StoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Estate/StoreRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Api/Estate/EstateResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Api/Estate/EstateResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Estate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Estate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppContent/EstateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppContent/EstateController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +261,7 @@
       <workItem from="1626584727077" duration="305000" />
       <workItem from="1626585206461" duration="159000" />
       <workItem from="1628425781026" duration="1682000" />
-      <workItem from="1629555555783" duration="4955000" />
+      <workItem from="1629555555783" duration="5013000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1605265283537</created>
