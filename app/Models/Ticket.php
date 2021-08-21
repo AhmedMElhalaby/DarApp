@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property mixed title
  * @property mixed message
  * @property mixed attachment
+ * @property mixed lawyer_id
  * @property mixed status
  * @method Ticket find(int $id)
  * @method static updateOrCreate(array $array, array $array1)
@@ -18,8 +19,11 @@ use Illuminate\Database\Eloquent\Model;
 class Ticket extends Model
 {
     protected $table = 'tickets';
-    protected $fillable = ['user_id','title','message','attachment','status'];
+    protected $fillable = ['user_id','title','message','attachment','lawyer_id','status'];
 
+    public function lawyer(){
+        return $this->belongsTo(Admin::class,'lawyer_id');
+    }
     public function user(){
         return $this->belongsTo(User::class);
     }
@@ -104,6 +108,22 @@ class Ticket extends Model
     public function setAttachment($attachment): void
     {
         $this->attachment = Functions::StoreImageModel($attachment,'tickets');
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLawyerId()
+    {
+        return $this->lawyer_id;
+    }
+
+    /**
+     * @param mixed $lawyer_id
+     */
+    public function setLawyerId($lawyer_id): void
+    {
+        $this->lawyer_id = $lawyer_id;
     }
 
     /**
