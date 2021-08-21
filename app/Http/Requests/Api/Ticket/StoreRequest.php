@@ -20,7 +20,6 @@ class StoreRequest extends ApiRequest
     public function rules()
     {
         return [
-            'lawyer_id'=>'required|exists:admins,id',
             'title'=>'required|string',
             'message'=>'required',
             'attachment'=>'sometimes|mimes:jpeg,jpg,png'
@@ -33,7 +32,6 @@ class StoreRequest extends ApiRequest
         $Ticket =new  Ticket();
         $Ticket->setUserId($logged->getId());
         $Ticket->setTitle($this->title);
-        $Ticket->setLawyerId($this->lawyer_id);
         $Ticket->setMessage($this->message);
         if($this->hasFile('attachment')) {
             $Ticket->setAttachment($this->file('attachment'));

@@ -16,7 +16,6 @@ class CreateTicketsTable extends Migration
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->foreignId('lawyer_id')->nullable();
             $table->string('title')->nullable();;
             $table->longText('message')->nullable();;
             $table->string('attachment')->nullable();;
