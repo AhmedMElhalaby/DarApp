@@ -37,7 +37,7 @@ class FavouriteRequest extends ApiRequest
 
     public function persist()
     {
-        $Estates = (new Favourite())->where('user_id',auth()->user()->getId())->pluck('estate_id');
+        $Estates = (new Favourite())->where('user_id',auth('api')->user()->getId())->pluck('estate_id');
         $Objects = new Estate();
         $Objects = $Objects->whereIn('id', $Estates);
         $Objects = $Objects->paginate($this->per_page?:10);
