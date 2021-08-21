@@ -48,6 +48,9 @@ class IndexRequest extends ApiRequest
             $Objects = $Objects->where('user_id',auth('api')->user()->getId());
         }else{
             $Objects = $Objects->where('is_active',true);
+            if ($this->filled('user_id')){
+                $Objects = $Objects->where('user_id',$this->user_id);
+            }
         }
         if($this->save && auth('api')->check()){
             $SavedSearch = new SavedSearch();
