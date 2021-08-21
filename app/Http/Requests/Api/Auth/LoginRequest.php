@@ -47,6 +47,9 @@ class LoginRequest extends ApiRequest
         if (!Auth::attempt($credentials))
             return $this->failJsonResponse([__('auth.failed')]);
         $user = $this->user();
+        if(!$user->isIsActive()){
+            return $this->failJsonResponse([__('auth.unauthorized')]);
+        }
         $user->refresh();
         DB::table('oauth_access_tokens')->where('user_id', $user->id)->delete();
         $tokenResult = $user->createToken('Personal Access Token');
