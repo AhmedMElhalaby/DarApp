@@ -41,7 +41,7 @@ class TicketController extends Controller
                 'relation'=>[
                     'data'=> User::all(),
                     'custom'=>function($Object){
-                        return $Object->name;
+                        return $Object?$Object->name:'-';
                     },
                     'entity'=>'user'
                 ],
