@@ -84,6 +84,7 @@ class UpdateRequest extends FormRequest
     public function preset($crud,$id)
     {
         $Object = (new Estate())->find($id);
+        $Object->setUserId($this->user_id);
         $Object->setEstateType($this->estate_type);
         $Object->setEstateOfferType($this->estate_offer_type);
         $Object->setCityId($this->city_id);
