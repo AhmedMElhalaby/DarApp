@@ -116,13 +116,13 @@ class Functions
     }
     public static function SendSms($msg,$to){
         $ch = curl_init();
-        $userid = 'test';
-        $password = 'test';
-        $sender = 'test';
+        $userid = 'darProject';
+        $password = 'darProject2021';
+        $sender = 'Dar.app';
         $text = urlencode($msg);
         $encoding = 'UTF8';
         // auth call
-        $url = "http://api.unifonic.com/wrapper/sendSMS.php?userid={$userid}&password={$password}&to={$to}&msg={$text}&sender={$sender}&encoding={$encoding}";
+        $url = "https://www.nsms.ps/api.php?comm=sendsms&user={$userid}&pass={$password}&to={$to}&message={$text}&sender={$sender}";
         $ret  = json_decode(file_get_contents($url), true);
         $response = curl_exec($ch);
         curl_close($ch);
