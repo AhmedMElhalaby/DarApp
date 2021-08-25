@@ -84,5 +84,6 @@ Route::group([
         Route::get('favourites','EstateController@favourites');
         Route::post('favourites/toggle','EstateController@favourite_toggle');
         Route::post('media/delete','EstateController@delete_media');
+        Route::post('destroy','EstateController@destroy');
     });
 });

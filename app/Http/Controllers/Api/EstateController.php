@@ -11,6 +11,7 @@ use App\Http\Requests\Api\Estate\SavedSearchRequest;
 use App\Http\Requests\Api\Estate\StoreRequest;
 use App\Http\Requests\Api\Estate\UpdateRequest;
 use App\Http\Requests\Api\Estate\ShowRequest;
+use App\Http\Requests\Api\Estate\DestroyRequest;
 use App\Http\Requests\Api\Estate\DeleteMediaRequest;
 use App\Http\Requests\Api\Estate\SetOfferRequest;
 use App\Http\Requests\Api\Estate\GetOfferRequest;
@@ -114,5 +115,11 @@ class EstateController extends Controller
     public function recent_views(RecentViewRequest $request){
         return $request->persist();
     }
-
+    /**
+     * @param DestroyRequest $request
+     * @return JsonResponse
+     */
+    public function destroy(DestroyRequest $request){
+        return $request->persist();
+    }
 }
