@@ -25,8 +25,13 @@ Route::get('estate_type', 'HomeController@estate_type_response');
 Route::group([
     'namespace'  => 'Auth',
 ], function() {
-    Route::get('login', ['uses' => 'LoginController@showLoginForm','as'=>'admin.login']);
-    Route::post('login', ['uses' => 'LoginController@login']);
+    Route::group([
+        'middleware' => 'guest',
+    ], function() {
+        Route::get('login', ['uses' => 'LoginController@showLoginForm','as'=>'admin.login']);
+        Route::post('login', ['uses' => 'LoginController@login']);
+    });
+
     Route::group([
         'middleware' => 'auth.admin',
     ], function() {
