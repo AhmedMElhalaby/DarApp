@@ -51,6 +51,9 @@ class LoginController extends Controller
     }
     public function showLoginForm()
     {
+        if (auth()->check()) {
+            return redirect('admin');
+        }
         return view('AhmedPanel.auth.login');
     }
 }

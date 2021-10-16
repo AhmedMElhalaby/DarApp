@@ -10,7 +10,7 @@
 @section('content')
     <div class="row">
         <div class="col-md-12">
-            <form action="{{url($redirect.'/'.$Object->id)}}" method="post" enctype="multipart/form-data" class="card">
+            <div class="card">
                 <input disabled  name="_method" type="hidden" value="PUT">
                 @csrf
                 <div class="card-header card-header-tabs card-header-primary" data-background-color="{{ config('app.color') }}">
@@ -736,13 +736,12 @@
                                 <div id="map"></div>
                             </div>
                             <div class="row submit-btn">
-                                <button type="submit" class="btn btn-primary" style="margin-left:15px;margin-right:15px;">{{__('admin.save')}}</button>
                                 <button type="button" class="btn btn-primary" onclick="document.getElementById('estate_media_tab').click()" style="margin-left:15px;margin-right:15px;">{{__('admin.previous')}}</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 @endsection

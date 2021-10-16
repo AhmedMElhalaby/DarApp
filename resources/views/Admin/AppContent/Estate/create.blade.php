@@ -785,6 +785,7 @@
                 }
             });
         });
+        $("#city_id").trigger('change');
     </script>
     <script>
         let markers = [];

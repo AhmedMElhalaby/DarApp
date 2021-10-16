@@ -808,7 +808,7 @@
                 }
             });
         });
-        $('#city_id').trigger('change');
+        $("#city_id").trigger('change');
         function deleteMedia(id){
             $.post( "{{url('admin/app_content/estates/media/destroy')}}", { media_id:{{$Object->getId()}} }, function( response ) {
                 if (response.status.status === 'success'){
