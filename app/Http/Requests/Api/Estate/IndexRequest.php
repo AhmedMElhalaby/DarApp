@@ -186,6 +186,9 @@ class IndexRequest extends ApiRequest
         if(!$this->filled('price_from') && $this->filled('price_to')){
             $Objects = $Objects->where('price','<',$this->price_to);
         }
+        if ($this->filled('description')) {
+            $Objects = $Objects->where('description','Like','%'.$this->description.'%');
+        }
         if($this->filled('orderBy') && $this->filled('orderType')){
             $Objects = $Objects->orderBy($this->orderBy,''.$this->orderType);
         }
