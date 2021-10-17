@@ -247,4 +247,12 @@ return [
             'payment_and_contact'=>'تفاصيل الدفع والتواصل',
         ],
     ],
+    'Offer'=>[
+        'crud_names' => 'العروض',
+        'crud_name' => 'عرض',
+        'crud_the_name' => 'العرض',
+        'estate_id' => 'العقار',
+        'price' => 'السعر',
+        'expire_at' => 'تاريخ الانتهاء',
+    ]
 ];

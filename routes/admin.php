@@ -225,6 +225,18 @@ Route::group([
             Route::post('/media/destroy','EstateController@media_destroy');
             Route::get('/option/export','EstateController@export');
         });
+        Route::group([
+            'prefix'=>'offers'
+        ],function () {
+            Route::get('/','OfferController@index');
+            Route::get('/create','OfferController@create');
+            Route::post('/','OfferController@store');
+            Route::get('/{offer}','OfferController@show');
+            Route::get('/{offer}/edit','OfferController@edit');
+            Route::put('/{offer}','OfferController@update');
+            Route::delete('/{offer}','OfferController@destroy');
+            Route::get('/option/export','OfferController@export');
+        });
     });
     /*
     |--------------------------------------------------------------------------

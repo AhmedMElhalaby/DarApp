@@ -20,6 +20,7 @@ return [
         'app_auctions'=>'App Auctions',
         'app_data'=>'App Data',
         'app_content'=>'App Content',
+        'offers'=>'Offers',
         'estates'=>'Estates',
         'admins'=>'Admins',
         'settings'=>'Settings',

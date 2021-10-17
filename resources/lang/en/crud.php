@@ -247,4 +247,12 @@ return [
             'payment_and_contact'=>'Payment & Contact',
         ],
     ],
+    'Offer'=>[
+        'crud_names' => 'Offers',
+        'crud_name' => 'Offer',
+        'crud_the_name' => 'The Offer',
+        'estate_id' => 'Estate',
+        'price' => 'Price',
+        'expire_at' => 'Expire At',
+    ]
 ];

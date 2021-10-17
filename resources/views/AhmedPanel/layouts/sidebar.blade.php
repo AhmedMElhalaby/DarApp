@@ -124,6 +124,14 @@
                         </a>
                     </li>
                 @endif
+                @if (auth('admin')->user()->can('Offers'))
+                    <li class="nav-item @if(strpos(url()->current() , url('admin/app_content/estates'))===0) active @endif">
+                        <a href="{{url('admin/app_content/offers')}}" class="nav-link">
+                            <i class="material-icons">category</i>
+                            <p>{{__('admin.sidebar.offers')}}</p>
+                        </a>
+                    </li>
+                @endif
             </ul>
         </div>
     </li>
